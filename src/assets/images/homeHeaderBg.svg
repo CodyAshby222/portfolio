@@ -1,0 +1,11 @@
+<svg id="Stacked_Wave" data-name="Stacked Wave" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="946" viewBox="0 0 1920 946">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.143" y1="-0.772" x2="0.857" y2="3.099" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#264653"/>
+      <stop offset="1" stop-color="#2a9d8f"/>
+    </linearGradient>
+  </defs>
+  <rect id="Rectangle_3" data-name="Rectangle 3" width="1920" height="946" fill="url(#linear-gradient)"/>
+  <path id="Path_3" data-name="Path 3" d="M0,231.82c128,41.067,384,217.611,640,205.334s384-327.687,640-266.722,512,457.238,640,571.547V863.7H0Z" transform="translate(0 82.212)" fill="rgba(255,255,255,0.03)"/>
+  <path id="Path_4" data-name="Path 4" d="M0,366.792c192,77.813,576,432.624,960,389.066S1728,270.372,1920,149V863.7H0Z" transform="translate(0 82.212)" fill="rgba(255,255,255,0.03)"/>
+</svg>
