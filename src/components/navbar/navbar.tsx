@@ -1,9 +1,12 @@
+import { Typography } from "@mui/material";
+import { useModeContext } from "../../hooks/useContext";
+
 const Navbar = () => {
+  const { darkMode, setDarkMode } = useModeContext();
   return (
     <>
-      <div>THIS IS A NAVBAR</div>
-      {/* {darkMode ? null : <div>No Dark</div>} */}
-      {/* <div onClick={() => setDarkMode((prev) => !prev)}>Test: {darkMode}</div> */}
+      <Typography>THIS IS A NAVBAR</Typography>
+      <div onClick={() => setDarkMode(!darkMode)}>Dark Light Toggle</div>
     </>
   );
 };
