@@ -5,8 +5,10 @@ const Navbar = () => {
   const { darkMode, setDarkMode } = useModeContext();
   return (
     <>
-      <Typography>THIS IS A NAVBAR</Typography>
-      <div onClick={() => setDarkMode(!darkMode)}>Dark Light Toggle</div>
+      <Typography>Navbar</Typography>
+      <Typography onClick={() => setDarkMode(!darkMode)}>
+        Dark Light Toggle
+      </Typography>
     </>
   );
 };
