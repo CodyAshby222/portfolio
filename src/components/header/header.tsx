@@ -1,14 +1,18 @@
 import { Button, Container, Grid, Typography, Paper } from "@mui/material";
-import { WhiteText } from "../../appStyles";
-import HeaderBg from "../../assets/images/header-bg.jpg";
-import HeaderImg from "../../assets/images/header-img.png";
+import { RowCenter, WhiteText } from "../../appStyles";
 import { HomeHeaderImage } from "./headerStyles";
+const HeaderBg = require("../../assets/images/header-bg.jpg");
+const HeaderImg = require("../../assets/images/header-img.png");
 
 const HomeHeader = () => {
   return (
     <>
       <Paper sx={{ padding: "6rem 0px", backgroundImage: `url(${HeaderBg})` }}>
         <Container maxWidth="lg">
+          <RowCenter>
+            <div>Test</div>
+            <div>Test</div>
+          </RowCenter>
           <Grid container>
             <Grid item lg={6} xs={12}>
               <Typography>Test</Typography>
@@ -17,8 +21,6 @@ const HomeHeader = () => {
             </Grid>
             <Grid item lg={6} xs={12}>
               <HomeHeaderImage src={HeaderImg} />
-              <Typography>Test</Typography>
-              <Typography>Test</Typography>
             </Grid>
           </Grid>
         </Container>

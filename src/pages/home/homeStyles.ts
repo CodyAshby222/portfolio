@@ -1,4 +1,4 @@
-import { createTheme, styled } from "@mui/material/styles";
+// import { createTheme, styled } from "@mui/material/styles";
 
 // const HeaderImage = styled("img")({
 //   color: "#ffffff",
@@ -6,3 +6,5 @@ import { createTheme, styled } from "@mui/material/styles";
 // });
 
 // export { Image };
+
+export {};

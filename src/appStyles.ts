@@ -34,20 +34,24 @@ const WhiteText = styled("div")({
 
 const Row = styled("div")({
   display: "flex",
+  flexWrap: "wrap",
 });
 
 const RowCenter = styled("div")({
   display: "flex",
   justifyContent: "center",
+  flexWrap: "wrap",
 });
 const RowSpaceBetween = styled("div")({
   display: "flex",
-  justifyContent: "center",
+  justifyContent: "space-between",
+  flexWrap: "wrap",
 });
 
 const RowSpaceAround = styled("div")({
   display: "flex",
-  justifyContent: "center",
+  justifyContent: "space-around",
+  flexWrap: "wrap",
 });
 
 export {
