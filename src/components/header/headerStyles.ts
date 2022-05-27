@@ -41,3 +41,5 @@ export const SocialImage = styled("img")({
   width: 35,
   marginRight: 10,
 });
+
+export const SocialLink = styled("a")({});
