@@ -15,13 +15,13 @@ import { useEffect } from "react";
 
 const HeaderImg = require("../../assets/images/header-img.png");
 const WhiteWave = require("../../assets/images/white-wave.png");
-const BlackWave = require("../../assets/images/white-wave.png");
+const BlackWave = require("../../assets/images/black-wave.png");
 const EmailImg = require("../../assets/images/email-icon.png");
 const LinkedInImg = require("../../assets/images/linkedin-icon.png");
 const GitHubImg = require("../../assets/images/github-icon.png");
 
 const HomeHeader = () => {
-  const { darkMode, setDarkMode } = useModeContext();
+  const { darkMode } = useModeContext();
   useEffect(() => {
     console.log(darkMode);
   }, [darkMode]);
@@ -50,6 +50,7 @@ const HomeHeader = () => {
             <HomeHeaderImage src={HeaderImg} />
           </RowCenter>
         </Container>
+        <div>{darkMode ? "Dark" : "Light"}</div>
         <WaveImage src={darkMode ? BlackWave : WhiteWave} />
       </Section>
     </>
