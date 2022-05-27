@@ -1,6 +1,8 @@
 import { createTheme, styled } from "@mui/material/styles";
 
-const DarkTheme = createTheme({
+// Themes
+
+export const DarkTheme = createTheme({
   palette: {
     mode: "dark",
   },
@@ -12,12 +14,9 @@ const DarkTheme = createTheme({
   },
 });
 
-const LightTheme = createTheme({
+export const LightTheme = createTheme({
   palette: {
     mode: "light",
-    primary: {
-      main: "#F4A261",
-    },
   },
   shape: {
     borderRadius: 0,
@@ -27,39 +26,49 @@ const LightTheme = createTheme({
   },
 });
 
-const WhiteText = styled("div")({
+// Text
+
+export const WhiteText = styled("div")({
   color: "#ffffff",
-  fontFamily: "'Poppins', sans-serif",
 });
 
-const Row = styled("div")({
+// FlexBox
+
+export const Row = styled("div")({
   display: "flex",
   flexWrap: "wrap",
 });
 
-const RowCenter = styled("div")({
+export const RowCenter = styled("div")({
   display: "flex",
   justifyContent: "center",
   flexWrap: "wrap",
 });
-const RowSpaceBetween = styled("div")({
+export const RowSpaceBetween = styled("div")({
   display: "flex",
   justifyContent: "space-between",
   flexWrap: "wrap",
 });
 
-const RowSpaceAround = styled("div")({
+export const RowSpaceAround = styled("div")({
   display: "flex",
   justifyContent: "space-around",
   flexWrap: "wrap",
 });
 
-export {
-  DarkTheme,
-  LightTheme,
-  WhiteText,
-  Row,
-  RowCenter,
-  RowSpaceBetween,
-  RowSpaceAround,
-};
+// Buttons
+
+export const WhiteButton = styled("div")({
+  width: 175,
+  color: "#218074",
+  backgroundColor: "#fff",
+  fontWeight: 700,
+  borderRadius: "100vh",
+  textAlign: "center",
+  padding: "10px",
+  cursor: "pointer",
+});
+
+export const OrangeButton = styled("div")({
+  width: 200,
+});

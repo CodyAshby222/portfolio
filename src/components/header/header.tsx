@@ -1,32 +1,53 @@
-import { Button, Container, Grid, Typography, Paper } from "@mui/material";
-import { RowCenter, WhiteText } from "../../appStyles";
-import { HomeHeaderImage } from "./headerStyles";
-const HeaderBg = require("../../assets/images/header-bg.jpg");
+import { Container } from "@mui/material";
+import { Row, RowCenter, WhiteButton } from "../../appStyles";
+import {
+  HomeHeaderImage,
+  Section,
+  WaveImage,
+  Title,
+  SubTitle,
+  HomeHeaderBox,
+  SocialImage,
+} from "./headerStyles";
+
 const HeaderImg = require("../../assets/images/header-img.png");
+const WaveImg = require("../../assets/images/white-wave.png");
+const EmailImg = require("../../assets/images/email-icon.png");
+const LinkedInImg = require("../../assets/images/linkedin-icon.png");
+const GitHubImg = require("../../assets/images/github-icon.png");
 
 const HomeHeader = () => {
   return (
     <>
-      <Paper sx={{ padding: "6rem 0px", backgroundImage: `url(${HeaderBg})` }}>
+      <Section>
         <Container maxWidth="lg">
-          <RowCenter>
-            <div>Test</div>
-            <div>Test</div>
+          <RowCenter style={{ alignItems: "center" }}>
+            <HomeHeaderBox>
+              <SubTitle>Hello, I'm</SubTitle>
+              <Title>CODY ASHBY</Title>
+              <SubTitle>FRONT-END WEB DEVELOPER</SubTitle>
+              <Row style={{ marginTop: 20, marginBottom: 40 }}>
+                <SocialImage src={EmailImg} />
+                <SocialImage src={LinkedInImg} />
+                <SocialImage src={GitHubImg} />
+              </Row>
+              <WhiteButton>LET'S CHAT</WhiteButton>
+            </HomeHeaderBox>
+            <HomeHeaderImage src={HeaderImg} />
           </RowCenter>
-          <Grid container>
-            <Grid item lg={6} xs={12}>
-              <Typography>Test</Typography>
-              <WhiteText>Test</WhiteText>
-              <Button variant="contained">Test</Button>
-            </Grid>
-            <Grid item lg={6} xs={12}>
-              <HomeHeaderImage src={HeaderImg} />
-            </Grid>
-          </Grid>
         </Container>
-      </Paper>
+        <WaveImage src={WaveImg} />
+      </Section>
     </>
   );
 };
+
+// const ProjectHeader = () => {
+//   return (
+//     <>
+//       <div>PROJECT HEADER</div>
+//     </>
+//   );
+// };
 
 export { HomeHeader };

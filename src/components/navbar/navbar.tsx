@@ -1,16 +1,8 @@
 import { useModeContext } from "../../hooks/useContext";
 import * as React from "react";
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  CssBaseline,
-  useScrollTrigger,
-  Box,
-  Container,
-} from "@mui/material";
+import { Typography, Container } from "@mui/material";
 import MobileMenu from "../mobile/mobileMenu";
-import { RowSpaceAround, RowSpaceBetween } from "../../appStyles";
+import { RowSpaceBetween } from "../../appStyles";
 import { Nav } from "./navbarStyles";
 
 const Navbar = () => {
@@ -18,13 +10,15 @@ const Navbar = () => {
   return (
     <>
       <Nav>
-        <RowSpaceAround>
-          <Typography>Navbar</Typography>
-          <Typography onClick={() => setDarkMode(!darkMode)}>
-            Dark Light Toggle
-          </Typography>
-          <MobileMenu />
-        </RowSpaceAround>
+        <Container maxWidth="lg">
+          <RowSpaceBetween>
+            <Typography>Navbar</Typography>
+            <Typography onClick={() => setDarkMode(!darkMode)}>
+              Dark Light Toggle
+            </Typography>
+            <MobileMenu />
+          </RowSpaceBetween>
+        </Container>
       </Nav>
     </>
   );
