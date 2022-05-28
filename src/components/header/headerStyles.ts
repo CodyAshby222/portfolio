@@ -1,9 +1,7 @@
 import { styled } from "@mui/material/styles";
-const HeaderBg = require("../../assets/images/header-bg.jpg");
 
 export const Section = styled("div")({
   padding: "8rem 0px",
-  background: `url(${HeaderBg}) no-repeat center center fixed`,
   backgroundSize: "cover",
   position: "relative",
 });

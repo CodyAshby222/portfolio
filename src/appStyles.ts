@@ -5,6 +5,13 @@ import { createTheme, styled } from "@mui/material/styles";
 export const DarkTheme = createTheme({
   palette: {
     mode: "dark",
+    text: {
+      primary: "#fff",
+    },
+    background: {
+      default: "#000",
+      paper: "0D0D0D",
+    },
   },
   shape: {
     borderRadius: 0,
@@ -17,6 +24,13 @@ export const DarkTheme = createTheme({
 export const LightTheme = createTheme({
   palette: {
     mode: "light",
+    text: {
+      primary: "#000",
+    },
+    background: {
+      default: "#fff",
+      paper: "#f8fafa",
+    },
   },
   shape: {
     borderRadius: 0,

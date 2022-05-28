@@ -11,24 +11,29 @@ import {
   SocialLink,
 } from "./headerStyles";
 import { useModeContext } from "../../hooks/useContext";
-import { useEffect } from "react";
 
-const HeaderImg = require("../../assets/images/header-img.png");
-const WhiteWave = require("../../assets/images/white-wave.png");
-const BlackWave = require("../../assets/images/black-wave.png");
-const EmailImg = require("../../assets/images/email-icon.png");
-const LinkedInImg = require("../../assets/images/linkedin-icon.png");
-const GitHubImg = require("../../assets/images/github-icon.png");
+const LightImg = require("../../assets/images/light/header-img.png");
+const DarkImg = require("../../assets/images/dark/header-img.png");
+const WhiteWave = require("../../assets/images/light/white-wave.png");
+const BlackWave = require("../../assets/images/dark/black-wave.png");
+const EmailImg = require("../../assets/icons/email-icon.png");
+const LinkedInImg = require("../../assets/icons/linkedin-icon.png");
+const GitHubImg = require("../../assets/icons/github-icon.png");
+const LightBg = require("../../assets/images/light/header-bg.jpg");
+const DarkBg = require("../../assets/images/dark/header-bg.jpg");
 
 const HomeHeader = () => {
   const { darkMode } = useModeContext();
-  useEffect(() => {
-    console.log(darkMode);
-  }, [darkMode]);
   return (
     <>
-      <Section>
-        <Container maxWidth="lg">
+      <Section
+        style={{
+          background: `url(${
+            darkMode ? DarkBg : LightBg
+          }) no-repeat center center fixed`,
+        }}
+      >
+        <Container>
           <RowCenter style={{ alignItems: "center" }}>
             <HomeHeaderBox>
               <SubTitle>Hello, I'm</SubTitle>
@@ -47,10 +52,9 @@ const HomeHeader = () => {
               </Row>
               <WhiteButton>LET'S CHAT</WhiteButton>
             </HomeHeaderBox>
-            <HomeHeaderImage src={HeaderImg} />
+            <HomeHeaderImage src={darkMode ? DarkImg : LightImg} />
           </RowCenter>
         </Container>
-        <div>{darkMode ? "Dark" : "Light"}</div>
         <WaveImage src={darkMode ? BlackWave : WhiteWave} />
       </Section>
     </>
