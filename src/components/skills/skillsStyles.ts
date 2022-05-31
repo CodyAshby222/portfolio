@@ -56,3 +56,8 @@ export const icons = [
   "csharp",
   "chrome",
 ];
+
+export const SkillsImage = styled("img")({
+  width: 450,
+  margin: "1rem",
+});
