@@ -1,5 +1,5 @@
 import { Typography, Box, Container } from "@mui/material";
-import { Section, WaveImage } from "./skillsStyles";
+import { Section, WaveImage, InvertedWaveImage } from "./skillsStyles";
 import { RowCenter } from "../../appStyles";
 import { useModeContext } from "../../hooks/useContext";
 
@@ -15,26 +15,20 @@ const Skills = () => {
       >
         <WaveImage src={darkMode ? BlackWave : WhiteWave} />
         <Container sx={{ color: "text.primary" }}>
+          <Typography sx={{ mb: 2, textAlign: "center" }} variant="h4">
+            SKILLS
+          </Typography>
           <RowCenter style={{ alignItems: "center" }}>
-            <Box style={{ width: 650 }}>
-              <Typography sx={{ mb: 2 }} variant="h4">
-                ABOUT ME
-              </Typography>
-              <Typography sx={{ mb: 2 }}>
-                I'm a student at Neumont College of Computer Science majoring in
-                Web Design and Development. My interest in development started
-                years ago with a couple of friends showing me some fundamentals
-                of code and I developed a passion ever since.
-              </Typography>
-              <Typography>
-                I've learned a lot since then and I want to continue my journey
-                as a web developer and hone my skills with varieties of
-                libraries and frameworks like React, Angular, NodeJS, and many
-                more.
-              </Typography>
+            <Box style={{ width: 450 }}>
+              <Typography sx={{ mb: 2 }}>Images</Typography>
+              <Typography>List</Typography>
+            </Box>
+            <Box style={{ width: 450 }}>
+              <Typography sx={{ mb: 2 }}>Image</Typography>
             </Box>
           </RowCenter>
         </Container>
+        <InvertedWaveImage src={darkMode ? BlackWave : WhiteWave} />
       </Section>
     </>
   );

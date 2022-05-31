@@ -11,3 +11,10 @@ export const WaveImage = styled("img")({
   top: -3,
   transform: "rotate(180deg)",
 });
+
+export const InvertedWaveImage = styled("img")({
+  width: "100%",
+  position: "absolute",
+  bottom: -3,
+  transform: "scaleX(-1)",
+});
