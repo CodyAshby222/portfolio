@@ -18,3 +18,41 @@ export const InvertedWaveImage = styled("img")({
   bottom: -3,
   transform: "scaleX(-1)",
 });
+
+export const DevIcon = styled("i")({
+  fontSize: "30px",
+  backgroundColor: "#ffffff",
+  color: "#2A9D8F",
+  padding: 10,
+  margin: 5,
+  borderRadius: "100vh",
+  boxShadow: "2px 2px 4px rgba(0,0,0,0.2)",
+});
+
+export const ListIcon = styled("i")({
+  fontSize: "30px",
+  color: "#2A9D8F",
+  // padding: 10,
+  marginRight: 12,
+});
+
+export const listStyle = {
+  alignItems: "center",
+  margin: "30px 10px 10px 10px",
+};
+
+export const icons = [
+  "html5",
+  "css3",
+  "javascript",
+  "react",
+  "angularjs",
+  "nodejs",
+  "graphql",
+  "mongodb",
+  "java",
+  "python",
+  "git",
+  "csharp",
+  "chrome",
+];
