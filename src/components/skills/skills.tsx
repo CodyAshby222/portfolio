@@ -15,6 +15,7 @@ import { useModeContext } from "../../hooks/useContext";
 const WhiteWave = require("../../assets/images/light/white-wave.png");
 const BlackWave = require("../../assets/images/dark/black-wave.png");
 const LightImg = require("../../assets/images/light/skills-img.png");
+const DarkImg = require("../../assets/images/dark/skills-img.png");
 
 const Skills = () => {
   const { darkMode } = useModeContext();
@@ -71,7 +72,7 @@ const Skills = () => {
                 </Typography>
               </Row>
             </Box>
-            <SkillsImage src={LightImg} />
+            <SkillsImage src={darkMode ? DarkImg : LightImg} />
           </RowSpaceAround>
         </Container>
         <InvertedWaveImage src={darkMode ? BlackWave : WhiteWave} />
