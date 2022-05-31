@@ -28,9 +28,7 @@ const HomeHeader = () => {
     <>
       <Section
         style={{
-          background: `url(${
-            darkMode ? DarkBg : LightBg
-          }) no-repeat center center fixed`,
+          background: `url(${darkMode ? DarkBg : LightBg}) repeat fixed bottom`,
         }}
       >
         <Container>
