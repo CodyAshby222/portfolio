@@ -3,7 +3,7 @@ import { boxStyles } from "./projectSectionStyles";
 import { RowCenter } from "../../appStyles";
 import Card from "../card/card";
 import { useEffect, useState } from "react";
-import { IProject } from "../../interfaces/project";
+import { IProject } from "../../interfaces/projectInterface";
 
 const ProjectSection = () => {
   const [allProjects, setAllProjects] = useState<IProject[]>([]);

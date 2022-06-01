@@ -1,27 +1,33 @@
 [
     {
+        "id": 0,
         "title": "Bifrost",
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
-        "img": [""],
+        "logo": "bifrost-logo",
+        "img": ["bifrost-logo"],
         "github": "github.com",
         "website": "",
         "technologies": ["html", "javascript"]
     },
     {
+        "id": 1,
         "title": "RSnip",
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
-        "img": [""],
+        "logo": "bifrost-logo",
+        "img": ["bifrost-logo"],
         "github": "github.com",
         "website": "",
         "technologies": ["html", "javascript"]
     },
-    {
+    {  
+        "id": 2,
         "title": "Bifrost",
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
-        "img": [""],
+        "logo": "bifrost-logo",
+        "img": ["bifrost-logo"],
         "github": "github.com",
         "website": "",
         "technologies": ["html", "javascript"]

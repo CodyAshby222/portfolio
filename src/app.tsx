@@ -17,7 +17,7 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/:projectId" element={<Project />} />
+            <Route path="/project/:projectId" element={<Project />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
