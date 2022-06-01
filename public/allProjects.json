@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Bifrost",
+        "subtitle": "Lightweight Discord Clone",
+        "description": "Lorem Ipsem project",
+        "img": [""],
+        "github": "github.com",
+        "website": "",
+        "technologies": ["html", "javascript"]
+    },
+    {
+        "title": "RSnip",
+        "subtitle": "Lightweight Discord Clone",
+        "description": "Lorem Ipsem project",
+        "img": [""],
+        "github": "github.com",
+        "website": "",
+        "technologies": ["html", "javascript"]
+    },
+    {
+        "title": "Bifrost",
+        "subtitle": "Lightweight Discord Clone",
+        "description": "Lorem Ipsem project",
+        "img": [""],
+        "github": "github.com",
+        "website": "",
+        "technologies": ["html", "javascript"]
+    }
+]
