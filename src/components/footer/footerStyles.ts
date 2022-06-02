@@ -1,7 +1,7 @@
 import { styled } from "@mui/material/styles";
 
 export const Section = styled("div")({
-  padding: "8rem 0px",
+  padding: "9rem 0px 5rem 0px",
   backgroundSize: "cover",
   position: "relative",
 });
@@ -29,6 +29,8 @@ export const WaveImage = styled("img")({
 export const SocialImage = styled("img")({
   width: 35,
   marginRight: 10,
+  boxShadow: "0px 0px 8px rgba(0,0,0,0.3)",
+  borderRadius: "100vh",
 });
 
 export const SocialLink = styled("a")({});

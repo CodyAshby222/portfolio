@@ -10,9 +10,10 @@ import {
   CardTitle,
 } from "./cardStyles";
 import { RowSpaceBetween } from "../../appStyles";
+import { Link } from "react-router-dom";
 
 const Card = (props: IProject) => {
-  const { title, description, img, logo } = props;
+  const { id, title, description, img, logo } = props;
 
   useEffect(() => {
     console.log(img);
@@ -29,7 +30,9 @@ const Card = (props: IProject) => {
               test test test test test test tes tte stest ts te test test estes
               te setes test es test est estes t
             </CardDescription>
-            <CardButton>VIEW PROJECT</CardButton>
+            <Link style={{ textDecoration: "none" }} to={`/project/${id}`}>
+              <CardButton>VIEW PROJECT</CardButton>
+            </Link>
           </CardInfo>
           <CardImg src={require(`../../assets/images/bifrost/${logo}.jpg`)} />
         </RowSpaceBetween>

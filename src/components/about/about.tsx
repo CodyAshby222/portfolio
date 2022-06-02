@@ -1,15 +1,16 @@
 import { Typography, Box, Container } from "@mui/material";
-import { boxStyles, ProfileImage } from "./aboutStyles";
+import { boxStyles, ProfileImage, LightCode, DarkCode } from "./aboutStyles";
 import { RowCenter } from "../../appStyles";
 
 const ProfileImg = require("../../assets/images/profile-img.jpg");
+const CodeImg = require("../../assets/images/code.png");
 
 const About = () => {
   return (
     <>
       <Box sx={boxStyles}>
         <Container>
-          <RowCenter style={{ alignItems: "center" }}>
+          <RowCenter style={{ alignItems: "center", position: "relative" }}>
             <ProfileImage src={ProfileImg} />
             <Box style={{ width: 650 }}>
               <Typography sx={{ mb: 2 }} variant="h4">
@@ -28,6 +29,8 @@ const About = () => {
                 more.
               </Typography>
             </Box>
+            <LightCode src={CodeImg} />
+            <DarkCode src={CodeImg} />
           </RowCenter>
         </Container>
       </Box>

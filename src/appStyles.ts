@@ -44,6 +44,7 @@ export const LightTheme = createTheme({
 
 export const WhiteText = styled("div")({
   color: "#ffffff",
+  "text-shadow": "0px 0px 8px rgba(0,0,0,0.3)",
 });
 
 // FlexBox
@@ -74,15 +75,32 @@ export const RowSpaceAround = styled("div")({
 
 export const WhiteButton = styled("div")({
   width: 175,
-  color: "#218074",
+  color: "#264653",
   backgroundColor: "#fff",
   fontWeight: 700,
   borderRadius: "100vh",
   textAlign: "center",
   padding: "10px",
   cursor: "pointer",
+  transition: "0.2s",
+  boxShadow: "0px 0px 8px rgba(0,0,0,0.3)",
+  "&:hover": {
+    backgroundColor: "#eee",
+  },
 });
 
 export const OrangeButton = styled("div")({
-  width: 200,
+  width: 175,
+  color: "#fff",
+  background: "linear-gradient(to bottom right, #F4A261, #E76F51)",
+  fontWeight: 700,
+  borderRadius: "100vh",
+  textAlign: "center",
+  padding: "10px",
+  cursor: "pointer",
+  transition: "0.2s",
+  boxShadow: "0px 0px 8px rgba(0,0,0,0.3)",
+  "&:hover": {
+    opacity: 0.9,
+  },
 });

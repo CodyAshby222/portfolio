@@ -1,5 +1,11 @@
 import { Container, Box, Typography } from "@mui/material";
-import { Row, RowCenter, WhiteButton } from "../../appStyles";
+import {
+  OrangeButton,
+  Row,
+  RowCenter,
+  WhiteButton,
+  WhiteText,
+} from "../../appStyles";
 import { Section, WaveImage, SocialImage, SocialLink } from "./footerStyles";
 import { useModeContext } from "../../hooks/useContext";
 
@@ -25,9 +31,19 @@ const Footer = () => {
         <Container>
           <RowCenter style={{ alignItems: "center" }}>
             <Box>
-              <Typography>Want to get in touch?</Typography>
-              <WhiteButton>LET'S CHAT</WhiteButton>
-              <Row style={{ marginTop: 20, marginBottom: 40 }}>
+              <WhiteText style={{ fontSize: "2rem", fontWeight: 500 }}>
+                Want to get in touch?
+              </WhiteText>
+              {darkMode ? (
+                <WhiteButton style={{ margin: "1.5rem auto" }}>
+                  LET'S CHAT
+                </WhiteButton>
+              ) : (
+                <OrangeButton style={{ margin: "1.5rem auto" }}>
+                  LET'S CHAT
+                </OrangeButton>
+              )}
+              <RowCenter style={{ marginTop: "2rem", marginBottom: 40 }}>
                 <SocialLink href="#">
                   <SocialImage src={EmailImg} />
                 </SocialLink>
@@ -37,7 +53,7 @@ const Footer = () => {
                 <SocialLink href="#">
                   <SocialImage src={GitHubImg} />
                 </SocialLink>
-              </Row>
+              </RowCenter>
             </Box>
           </RowCenter>
         </Container>

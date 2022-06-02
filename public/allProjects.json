@@ -31,5 +31,16 @@
         "github": "github.com",
         "website": "",
         "technologies": ["html", "javascript"]
+    },
+    {  
+        "id": 3,
+        "title": "Bifrost",
+        "subtitle": "Lightweight Discord Clone",
+        "description": "Lorem Ipsem project",
+        "logo": "bifrost-logo",
+        "img": ["bifrost-logo"],
+        "github": "github.com",
+        "website": "",
+        "technologies": ["html", "javascript"]
     }
 ]

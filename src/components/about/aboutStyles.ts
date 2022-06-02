@@ -13,3 +13,21 @@ export const ProfileImage = styled("img")({
   objectFit: "cover",
   borderRadius: "100vh",
 });
+
+export const LightCode = styled("img")({
+  width: 450,
+  opacity: 0.04,
+  position: "absolute",
+  right: "20%",
+  top: -60,
+});
+
+export const DarkCode = styled("img")({
+  width: 450,
+  "-webkit-filter": "invert(100%)",
+  filter: "invert(100%)",
+  opacity: 0.06,
+  position: "absolute",
+  right: "20%",
+  top: -60,
+});
