@@ -3,5 +3,6 @@ import { styled } from "@mui/material/styles";
 export const boxStyles = {
   color: "text.primary",
   bgcolor: "background.default",
-  padding: "6rem 0px",
+  padding: "7rem 0px 15rem 0px",
+  marginBottom: "-10rem",
 };

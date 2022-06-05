@@ -1,12 +1,13 @@
-import { Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ProjectHeader } from "../../components/header/header";
 import { IProject } from "../../interfaces/projectInterface";
+import Footer from "../../components/footer/footer";
+import ProjectDisplay from "../../components/projectDisplay/projectDisplay";
+import Technologies from "../../components/technologies/technologies";
 
 const Project = () => {
   const [project, setProject] = useState<IProject>();
-
   const { projectId } = useParams();
 
   useEffect(() => {
@@ -23,15 +24,18 @@ const Project = () => {
       });
   }, [projectId]);
 
-  useEffect(() => {
-    console.log(project);
-  }, [project]);
-
   return (
     <>
       {project ? (
         <>
           <ProjectHeader title={project.title} subtitle={project.subtitle} />
+          <ProjectDisplay
+            title={project.title}
+            desc={project.description}
+            img={project.img}
+          />
+          <Technologies techUsed={project.technologies} />
+          <Footer />
         </>
       ) : null}
     </>

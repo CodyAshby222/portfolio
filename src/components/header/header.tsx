@@ -34,7 +34,8 @@ const HomeHeader = () => {
     <>
       <Section
         style={{
-          background: `url(${darkMode ? DarkBg : LightBg}) repeat fixed bottom`,
+          background: `url(${darkMode ? DarkBg : LightBg}) center center`,
+          backgroundSize: "cover",
         }}
       >
         <Container>
@@ -71,7 +72,7 @@ const ProjectHeader = ({ title, subtitle }) => {
     <>
       <Section
         style={{
-          background: `url(${darkMode ? DarkBg : LightBg}) repeat fixed bottom`,
+          background: `url(${darkMode ? DarkBg : LightBg}) center center`,
         }}
       >
         <Container>

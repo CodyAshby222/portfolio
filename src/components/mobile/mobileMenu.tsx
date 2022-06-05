@@ -22,23 +22,22 @@ const MobileMenu = () => {
           </ListItem>
           <ListItem>
             <ListItemText>
-              <Link to="/about">About</Link>
+              <Link to="/#about">About</Link>
             </ListItemText>
           </ListItem>
           <ListItem>
             <ListItemText>
-              <Link to="/contact">Contact</Link>
+              <Link to="/#skills">Skills</Link>
             </ListItemText>
           </ListItem>
           <ListItem>
             <ListItemText>
-              <Link to="/about">Faq</Link>
+              <Link to="/#projects">Projects</Link>
             </ListItemText>
           </ListItem>
         </List>
       </Drawer>
       <Hamburger toggled={open} toggle={setOpen} />
-      {/* <IconButton onClick={() => setOpen(!open)}>Hamburger</IconButton> */}
     </>
   );
 };

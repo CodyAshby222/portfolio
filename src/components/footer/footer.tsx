@@ -8,9 +8,13 @@ import {
 } from "../../appStyles";
 import { Section, WaveImage, SocialImage, SocialLink } from "./footerStyles";
 import { useModeContext } from "../../hooks/useContext";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const WhiteWave = require("../../assets/images/light/white-wave.png");
+const GreyWave = require("../../assets/images/light/grey-wave.png");
 const BlackWave = require("../../assets/images/dark/black-wave.png");
+const DarkGreyWave = require("../../assets/images/dark/grey-wave.png");
 const EmailImg = require("../../assets/icons/email-icon.png");
 const LinkedInImg = require("../../assets/icons/linkedin-icon.png");
 const GitHubImg = require("../../assets/icons/github-icon.png");
@@ -19,13 +23,17 @@ const DarkBg = require("../../assets/images/dark/header-bg.jpg");
 
 const Footer = () => {
   const { darkMode } = useModeContext();
+  const location = useLocation();
+  useEffect(() => {
+    console.log(location.pathname);
+  }, [location]);
+
   return (
     <>
       <Section
         style={{
-          background: `url(${
-            darkMode ? DarkBg : LightBg
-          }) no-repeat center center fixed`,
+          background: `url(${darkMode ? DarkBg : LightBg}) center center`,
+          backgroundSize: "cover",
         }}
       >
         <Container>
@@ -57,7 +65,18 @@ const Footer = () => {
             </Box>
           </RowCenter>
         </Container>
-        <WaveImage src={darkMode ? BlackWave : WhiteWave} />
+
+        <WaveImage
+          src={
+            darkMode && location.pathname.includes("project")
+              ? DarkGreyWave
+              : darkMode
+              ? BlackWave
+              : location.pathname.includes("project")
+              ? GreyWave
+              : WhiteWave
+          }
+        />
       </Section>
     </>
   );
