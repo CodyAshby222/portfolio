@@ -5,10 +5,12 @@ export const CardSection = styled("div")({
   width: 500,
   height: 225,
   margin: "1rem 1.5rem",
+  // border: "1px solid red",
   borderRadius: 7,
   backgroundColor: "#fff",
   color: "#000",
   boxShadow: "0px 0px 8px rgba(0,0,0,0.3)",
+  transition: "0.2s ease-in",
 });
 
 export const CardInfo = styled("div")({
@@ -43,26 +45,37 @@ export const CardDescription = styled("div")({
   },
 });
 
-export const CardButton = styled("div")({
-  width: 125,
-  color: "#E76F51",
-  fontWeight: 700,
+export const DevIcon = styled("i")({
+  fontSize: "30px",
+  backgroundColor: "#ffffff",
+  color: "#2A9D8F",
+  padding: 10,
+  margin: 5,
   borderRadius: "100vh",
-  textAlign: "center",
-  padding: "8px",
-  fontSize: "0.8rem",
-  cursor: "pointer",
-  marginTop: "1rem",
-  border: "2px solid #E76F51",
-  "&:hover": {
-    background: "linear-gradient(to bottom right, #F4A261, #E76F51)",
-    color: "#fff",
-    border: "none",
-    padding: "10px",
-  },
+  boxShadow: "2px 2px 4px rgba(0,0,0,0.2)",
 });
+
+// export const CardButton = styled("div")({
+//   width: 125,
+//   color: "#E76F51",
+//   fontWeight: 700,
+//   borderRadius: "100vh",
+//   textAlign: "center",
+//   padding: "8px",
+//   fontSize: "0.8rem",
+//   cursor: "pointer",
+//   marginTop: "1rem",
+//   border: "2px solid #E76F51",
+//   "&:hover": {
+//     background: "linear-gradient(to bottom right, #F4A261, #E76F51)",
+//     color: "#fff",
+//     border: "none",
+//     padding: "10px",
+//   },
+// });
 
 export const CardImg = styled("img")({
   width: 225,
+  height: 225,
   borderRadius: "0px 6px 6px 0px",
 });

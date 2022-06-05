@@ -1,7 +1,7 @@
 import { styled } from "@mui/material/styles";
 
 export const Section = styled("div")({
-  padding: "8rem 0px",
+  padding: "9rem 0px",
   backgroundSize: "cover",
   position: "relative",
 });

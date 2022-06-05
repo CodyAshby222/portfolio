@@ -8,7 +8,7 @@
         "img": ["bifrost-logo"],
         "github": "github.com",
         "website": "",
-        "technologies": ["html", "javascript"]
+        "technologies": ["html5", "javascript"]
     },
     {
         "id": 1,
@@ -19,7 +19,7 @@
         "img": ["bifrost-logo"],
         "github": "github.com",
         "website": "",
-        "technologies": ["html", "javascript"]
+        "technologies": ["html5", "javascript"]
     },
     {  
         "id": 2,
@@ -30,7 +30,7 @@
         "img": ["bifrost-logo"],
         "github": "github.com",
         "website": "",
-        "technologies": ["html", "javascript"]
+        "technologies": ["html5", "javascript"]
     },
     {  
         "id": 3,
@@ -41,6 +41,6 @@
         "img": ["bifrost-logo"],
         "github": "github.com",
         "website": "",
-        "technologies": ["html", "javascript"]
+        "technologies": ["html5", "javascript"]
     }
 ]
