@@ -1,5 +1,4 @@
-import { Typography } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { IProject } from "../../interfaces/projectInterface";
 import {
   CardDescription,
@@ -14,13 +13,9 @@ import { Link } from "react-router-dom";
 import { useModeContext } from "../../hooks/useContext";
 
 const Card = (props: IProject) => {
-  const { id, title, description, img, logo, technologies } = props;
+  const { id, title, description, logo, technologies } = props;
   const { darkMode } = useModeContext();
   const [hovered, setHovered] = useState<boolean>(false);
-  // "&:hover": {
-  //   boxShadow: "0px 0px 8px #2A9D8F",
-  // },
-
   const toggleHover = () => {
     setHovered((prev) => !prev);
   };
@@ -28,7 +23,6 @@ const Card = (props: IProject) => {
   return (
     <>
       <Link style={{ textDecoration: "none" }} to={`/project/${id}`}>
-        {/* <CardButton>VIEW PROJECT</CardButton> */}
         <CardSection
           style={{
             boxShadow: `0px 0px 8px ${

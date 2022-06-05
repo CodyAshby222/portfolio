@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { ProjectHeader } from "../../components/header/header";
 import { IProject } from "../../interfaces/projectInterface";
 
 const Project = () => {
@@ -26,7 +27,15 @@ const Project = () => {
     console.log(project);
   }, [project]);
 
-  return <>{project ? <Typography>{project.title}</Typography> : null}</>;
+  return (
+    <>
+      {project ? (
+        <>
+          <ProjectHeader title={project.title} subtitle={project.subtitle} />
+        </>
+      ) : null}
+    </>
+  );
 };
 
 export default Project;

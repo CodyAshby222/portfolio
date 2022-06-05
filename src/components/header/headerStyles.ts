@@ -37,6 +37,13 @@ export const WaveImage = styled("img")({
   bottom: -3,
 });
 
+export const InvertedWaveImage = styled("img")({
+  width: "100%",
+  position: "absolute",
+  bottom: -3,
+  transform: "scaleX(-1)",
+});
+
 export const SocialImage = styled("img")({
   width: 35,
   marginRight: 10,

@@ -75,17 +75,37 @@ export const RowSpaceAround = styled("div")({
 
 export const WhiteButton = styled("div")({
   width: 175,
+  height: 25,
   color: "#264653",
   backgroundColor: "#fff",
   fontWeight: 700,
   borderRadius: "100vh",
+  border: "2px solid #fff",
   textAlign: "center",
-  padding: "10px",
+  padding: "8px",
   cursor: "pointer",
   transition: "0.2s",
   boxShadow: "0px 0px 8px rgba(0,0,0,0.3)",
   "&:hover": {
     backgroundColor: "#eee",
+  },
+});
+
+export const WhiteOutlineButton = styled("div")({
+  width: 175,
+  height: 25,
+  color: "#fff",
+  fontWeight: 700,
+  border: "2px solid #fff",
+  borderRadius: "100vh",
+  textAlign: "center",
+  padding: "8px",
+  cursor: "pointer",
+  transition: "0.2s",
+  boxShadow: "0px 0px 8px rgba(0,0,0,0.3)",
+  "&:hover": {
+    backgroundColor: "#fff",
+    color: "#264653",
   },
 });
 

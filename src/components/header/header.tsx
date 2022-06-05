@@ -1,5 +1,10 @@
 import { Container } from "@mui/material";
-import { Row, RowCenter, WhiteButton } from "../../appStyles";
+import {
+  Row,
+  RowCenter,
+  WhiteButton,
+  WhiteOutlineButton,
+} from "../../appStyles";
 import {
   HomeHeaderImage,
   Section,
@@ -9,6 +14,7 @@ import {
   HomeHeaderBox,
   SocialImage,
   SocialLink,
+  InvertedWaveImage,
 } from "./headerStyles";
 import { useModeContext } from "../../hooks/useContext";
 
@@ -59,12 +65,39 @@ const HomeHeader = () => {
   );
 };
 
-// const ProjectHeader = () => {
-//   return (
-//     <>
-//       <div>PROJECT HEADER</div>
-//     </>
-//   );
-// };
+const ProjectHeader = ({ title, subtitle }) => {
+  const { darkMode } = useModeContext();
+  return (
+    <>
+      <Section
+        style={{
+          background: `url(${darkMode ? DarkBg : LightBg}) repeat fixed bottom`,
+        }}
+      >
+        <Container>
+          <RowCenter style={{ alignItems: "center" }}>
+            <HomeHeaderBox>
+              <Title style={{ textAlign: "center" }}>
+                {title.toUpperCase()}
+              </Title>
+              <SubTitle style={{ textAlign: "center" }}>
+                {subtitle.toUpperCase()}
+              </SubTitle>
+              <RowCenter>
+                <WhiteOutlineButton style={{ margin: "1rem" }}>
+                  VIEW GITHUB
+                </WhiteOutlineButton>
+                <WhiteButton style={{ margin: "1rem" }}>
+                  VIEW WEBSITE
+                </WhiteButton>
+              </RowCenter>
+            </HomeHeaderBox>
+          </RowCenter>
+        </Container>
+        <InvertedWaveImage src={darkMode ? BlackWave : WhiteWave} />
+      </Section>
+    </>
+  );
+};
 
-export { HomeHeader };
+export { HomeHeader, ProjectHeader };
