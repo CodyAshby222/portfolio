@@ -12,6 +12,7 @@ export const ProfileImage = styled("img")({
   margin: "2rem",
   objectFit: "cover",
   borderRadius: "100vh",
+  boxShadow: "3px 3px 5px rgba(0,0,0,0.3)",
 });
 
 export const LightCode = styled("img")({

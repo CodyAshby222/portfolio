@@ -22,7 +22,6 @@ export const InvertedWaveImage = styled("img")({
 export const DevIcon = styled("i")({
   fontSize: "30px",
   backgroundColor: "#ffffff",
-  color: "#2A9D8F",
   padding: 10,
   margin: 5,
   borderRadius: "100vh",

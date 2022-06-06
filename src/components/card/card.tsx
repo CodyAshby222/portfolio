@@ -1,29 +1,51 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IProject } from "../../interfaces/projectInterface";
-import {
-  CardDescription,
-  CardImg,
-  CardInfo,
-  CardSection,
-  CardTitle,
-  DevIcon,
-} from "./cardStyles";
-import { RowSpaceBetween, RowCenter } from "../../appStyles";
+import { CardSection, CardTitle, DevGroup, DevIcon } from "./cardStyles";
 import { Link } from "react-router-dom";
 import { useModeContext } from "../../hooks/useContext";
 
 const Card = (props: IProject) => {
-  const { id, title, description, logo, technologies } = props;
+  const { id, title, logo, technologies } = props;
   const { darkMode } = useModeContext();
+  const [fullImg, setFullImg] = useState<string>("");
   const [hovered, setHovered] = useState<boolean>(false);
   const toggleHover = () => {
     setHovered((prev) => !prev);
   };
 
+  useEffect(() => {
+    setFullImg(require(`../../assets/images/${logo}.jpg`));
+  }, [logo]);
+
   return (
     <>
       <Link style={{ textDecoration: "none" }} to={`/project/${id}`}>
         <CardSection
+          style={{
+            backgroundImage: `url(${fullImg})`,
+          }}
+          onMouseEnter={toggleHover}
+          onMouseLeave={toggleHover}
+        >
+          <CardTitle style={{ opacity: `${hovered ? 1 : 0}` }}>
+            {title}
+          </CardTitle>
+          <DevGroup style={{ opacity: `${hovered ? 1 : 0}` }}>
+            {technologies
+              ? technologies
+                  .filter((t, i) => i < 5)
+                  .map((icon, i) => {
+                    return (
+                      <DevIcon
+                        key={`${icon}_${i}`}
+                        className={`devicon-${icon}-plain`}
+                      ></DevIcon>
+                    );
+                  })
+              : null}
+          </DevGroup>
+        </CardSection>
+        {/* <CardSection
           style={{
             boxShadow: `0px 0px 8px ${
               hovered && darkMode
@@ -38,28 +60,17 @@ const Card = (props: IProject) => {
         >
           <RowSpaceBetween>
             <CardInfo>
-              <CardTitle>{title.toUpperCase()}</CardTitle>
+              
               <CardDescription>
                 {description} tes test test test test test test test test test
                 test test test test test test tes tte stest ts te test test
                 estes te setes test es test est estes t
               </CardDescription>
-              <RowCenter>
-                {technologies
-                  ? technologies.map((icon, i) => {
-                      return (
-                        <DevIcon
-                          key={`${icon}_${i}`}
-                          className={`devicon-${icon}-plain colored`}
-                        ></DevIcon>
-                      );
-                    })
-                  : null}
-              </RowCenter>
+              
             </CardInfo>
             <CardImg src={require(`../../assets/images/bifrost/${logo}.jpg`)} />
           </RowSpaceBetween>
-        </CardSection>
+        </CardSection> */}
       </Link>
     </>
   );
