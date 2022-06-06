@@ -20,8 +20,17 @@ export const CardSection = styled("div")({
 
 export const CardTitle = styled("div")({
   fontSize: "1.25rem",
-  margin: "1rem 1.5rem",
-  fontWeight: 600,
+  margin: "1rem 1.5rem 0px 1.5rem",
+  fontWeight: 500,
+  overflow: "hidden",
+  whiteSpace: "nowrap",
+  textOverflow: "ellipsis",
+  transition: "0.8s",
+});
+
+export const CardSubtitle = styled("div")({
+  fontSize: "0.8rem",
+  margin: "0px 1.5rem",
   overflow: "hidden",
   whiteSpace: "nowrap",
   textOverflow: "ellipsis",

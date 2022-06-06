@@ -61,7 +61,7 @@ const HomeHeader = () => {
             </HomeHeaderBox>
             <Relative>
               <HomeHeaderImage src={darkMode ? DarkImg : LightImg} />
-              <HeaderAnimation></HeaderAnimation>
+              <HeaderAnimation />
             </Relative>
           </RowCenter>
         </Container>

@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
 import { IProject } from "../../interfaces/projectInterface";
-import { CardSection, CardTitle, DevGroup, DevIcon } from "./cardStyles";
+import {
+  CardSection,
+  CardTitle,
+  CardSubtitle,
+  DevGroup,
+  DevIcon,
+} from "./cardStyles";
 import { Link } from "react-router-dom";
 import { useModeContext } from "../../hooks/useContext";
 
 const Card = (props: IProject) => {
-  const { id, title, logo, technologies } = props;
+  const { id, title, subtitle, logo, technologies } = props;
   const { darkMode } = useModeContext();
   const [fullImg, setFullImg] = useState<string>("");
   const [hovered, setHovered] = useState<boolean>(false);
@@ -30,6 +36,9 @@ const Card = (props: IProject) => {
           <CardTitle style={{ opacity: `${hovered ? 1 : 0}` }}>
             {title}
           </CardTitle>
+          <CardSubtitle style={{ opacity: `${hovered ? 1 : 0}` }}>
+            {subtitle}
+          </CardSubtitle>
           <DevGroup style={{ opacity: `${hovered ? 1 : 0}` }}>
             {technologies
               ? technologies

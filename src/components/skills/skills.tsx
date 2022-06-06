@@ -9,8 +9,9 @@ import {
   icons,
   listStyle,
 } from "./skillsStyles";
-import { Row, RowCenter, RowSpaceAround } from "../../appStyles";
+import { Row, RowCenter, RowSpaceAround, Relative } from "../../appStyles";
 import { useModeContext } from "../../hooks/useContext";
+import { GearAnimation, SkillsAnimation } from "../animations/animation";
 
 const WhiteWave = require("../../assets/images/light/white-wave.png");
 const BlackWave = require("../../assets/images/dark/black-wave.png");
@@ -72,7 +73,11 @@ const Skills = () => {
                 </Typography>
               </Row>
             </Box>
-            <SkillsImage src={darkMode ? DarkImg : LightImg} />
+            <Relative>
+              <SkillsImage src={darkMode ? DarkImg : LightImg} />
+              <SkillsAnimation />
+              <GearAnimation />
+            </Relative>
           </RowSpaceAround>
         </Container>
         <InvertedWaveImage src={darkMode ? BlackWave : WhiteWave} />
