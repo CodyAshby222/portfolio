@@ -47,6 +47,12 @@ export const WhiteText = styled("div")({
   "text-shadow": "0px 0px 8px rgba(0,0,0,0.3)",
 });
 
+// Postioning
+
+export const Relative = styled("div")({
+  position: "relative",
+});
+
 // FlexBox
 
 export const Row = styled("div")({

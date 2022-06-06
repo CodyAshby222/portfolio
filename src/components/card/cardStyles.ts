@@ -10,16 +10,16 @@ export const CardSection = styled("div")({
   boxShadow: "0px 0px 8px rgba(0,0,0,0.4)",
   position: "relative",
   backgroundPosition: "center",
-  backgroundSize: 310,
+  backgroundSize: 300,
   color: "#fff",
   "&:hover": {
     backgroundPosition: "left",
-    backgroundSize: 425,
+    backgroundSize: 415,
   },
 });
 
 export const CardTitle = styled("div")({
-  fontSize: "1.5rem",
+  fontSize: "1.25rem",
   margin: "1rem 1.5rem",
   fontWeight: 600,
   overflow: "hidden",

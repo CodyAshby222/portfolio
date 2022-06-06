@@ -4,6 +4,7 @@ import {
   RowCenter,
   WhiteButton,
   WhiteOutlineButton,
+  Relative,
 } from "../../appStyles";
 import {
   HomeHeaderImage,
@@ -17,6 +18,7 @@ import {
   InvertedWaveImage,
 } from "./headerStyles";
 import { useModeContext } from "../../hooks/useContext";
+import { HeaderAnimation } from "../animations/animation";
 
 const LightImg = require("../../assets/images/light/header-img.png");
 const DarkImg = require("../../assets/images/dark/header-img.png");
@@ -57,7 +59,10 @@ const HomeHeader = () => {
               </Row>
               <WhiteButton>LET'S CHAT</WhiteButton>
             </HomeHeaderBox>
-            <HomeHeaderImage src={darkMode ? DarkImg : LightImg} />
+            <Relative>
+              <HomeHeaderImage src={darkMode ? DarkImg : LightImg} />
+              <HeaderAnimation></HeaderAnimation>
+            </Relative>
           </RowCenter>
         </Container>
         <WaveImage src={darkMode ? BlackWave : WhiteWave} />
