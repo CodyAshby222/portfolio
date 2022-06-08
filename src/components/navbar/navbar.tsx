@@ -30,7 +30,7 @@ const Navbar = () => {
             changeNav && darkMode
               ? "0px 0px 8px rgba(255,255,255, 0.2)"
               : changeNav
-              ? "0px 0px 8px rgba(0,0,0, 0.3)"
+              ? "0px 0px 8px rgba(0,0,0, 0.2)"
               : null,
         }}
       >
@@ -68,7 +68,13 @@ const Navbar = () => {
                     </>
                   ) : (
                     <a style={navLink} href="/">
-                      HOME
+                      <Typography
+                        style={{
+                          color: changeNav && !darkMode ? "#000" : "#fff",
+                        }}
+                      >
+                        HOME
+                      </Typography>
                     </a>
                   )}
                   <ToggleButton />

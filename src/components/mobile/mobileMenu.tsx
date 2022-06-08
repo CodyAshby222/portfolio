@@ -5,11 +5,14 @@ import {
   ListItem,
   ListItemText,
   IconButton,
+  Typography,
 } from "@mui/material";
 import { useModeContext } from "../../hooks/useContext";
 import { navLink } from "../navbar/navbarStyles";
 import Hamburger from "hamburger-react";
 import { Link } from "react-scroll";
+import { Relative } from "../../appStyles";
+import { BurgerPosition } from "./mobileMenuStyles";
 
 const MobileMenu = () => {
   const { darkMode, setDarkMode } = useModeContext();
@@ -23,9 +26,16 @@ const MobileMenu = () => {
   window.addEventListener("scroll", changeHamburger);
 
   return (
-    <>
+    <Relative>
       <Drawer anchor="top" open={open} onClose={() => setOpen(false)}>
-        <List style={{ width: 320, display: "flex", flexDirection: "column" }}>
+        <BurgerPosition>
+          <Hamburger
+            color={!darkMode ? "#000" : "#fff"}
+            toggled={open}
+            toggle={setOpen}
+          />
+        </BurgerPosition>
+        <List style={{ display: "flex", flexDirection: "column" }}>
           <Link
             to="about"
             spy={true}
@@ -33,7 +43,8 @@ const MobileMenu = () => {
             offset={-100}
             duration={500}
           >
-            ABOUT
+            <div onClick={() => setOpen(false)}>ABOUT</div>
+            {/* <Typography onClick=()>ABOUT</Typography> */}
           </Link>
           <Link
             to="skills"
@@ -42,7 +53,7 @@ const MobileMenu = () => {
             offset={-100}
             duration={500}
           >
-            SKILLS
+            <div onClick={() => setOpen(false)}>SKILLS</div>
           </Link>
           <Link
             to="projects"
@@ -51,7 +62,7 @@ const MobileMenu = () => {
             offset={-100}
             duration={500}
           >
-            PROJECTS
+            <div onClick={() => setOpen(false)}>PROJECTS</div>
           </Link>
           <Link
             to="about"
@@ -60,21 +71,16 @@ const MobileMenu = () => {
             offset={-100}
             duration={500}
           >
-            CONTACT
+            <div onClick={() => setOpen(false)}>CONTACT</div>
           </Link>
         </List>
-        <Hamburger
-          color={!darkMode ? "#000" : "#fff"}
-          toggled={open}
-          toggle={setOpen}
-        />
       </Drawer>
       <Hamburger
         color={changeBurger && !darkMode ? "#000" : "#fff"}
         toggled={open}
         toggle={setOpen}
       />
-    </>
+    </Relative>
   );
 };
 
