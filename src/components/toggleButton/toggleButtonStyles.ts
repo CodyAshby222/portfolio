@@ -5,15 +5,15 @@ export const ToggleSection = styled("div")({
   height: 24,
   borderRadius: "100vh",
   position: "relative",
-  backgroundColor: "#fff",
+  marginLeft: "2rem",
+  cursor: "pointer",
 });
 
 export const Circle = styled("div")({
-  width: 20,
-  height: 20,
+  width: 18,
+  height: 18,
   position: "absolute",
-  top: 2,
+  top: 3,
   borderRadius: "100vh",
-  backgroundColor: "#000",
   transition: "0.3s",
 });

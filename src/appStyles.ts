@@ -44,7 +44,7 @@ export const LightTheme = createTheme({
 
 export const WhiteText = styled("div")({
   color: "#ffffff",
-  "text-shadow": "0px 0px 8px rgba(0,0,0,0.3)",
+  textShadow: "0px 0px 8px rgba(0,0,0,0.3)",
 });
 
 // Postioning

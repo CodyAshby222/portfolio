@@ -11,14 +11,14 @@ export const Title = styled("div")({
   lineHeight: 1.25,
   color: "#ffffff",
   fontWeight: 500,
-  "text-shadow": "0px 0px 8px rgba(0,0,0,0.3)",
+  textShadow: "0px 0px 8px rgba(0,0,0,0.3)",
 });
 
 export const SubTitle = styled("div")({
   fontWeight: 300,
   fontSize: "1.5rem",
   color: "#ffffff",
-  "text-shadow": "0px 0px 8px rgba(0,0,0,0.3)",
+  textShadow: "0px 0px 8px rgba(0,0,0,0.3)",
 });
 
 export const HomeHeaderBox = styled("div")({

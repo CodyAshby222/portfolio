@@ -25,7 +25,7 @@ export const LightCode = styled("img")({
 
 export const DarkCode = styled("img")({
   width: 450,
-  "-webkit-filter": "invert(100%)",
+  WebkitFilter: "invert(100%)",
   filter: "invert(100%)",
   opacity: 0.06,
   position: "absolute",

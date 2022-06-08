@@ -2,19 +2,21 @@ import { styled } from "@mui/material/styles";
 
 export const Nav = styled("div")({
   width: "100%",
-  border: "1px solid red",
   position: "fixed",
   zIndex: 10,
+  transition: "0.2s",
 });
 
 export const NavGroup = styled("div")({
   display: "flex",
   alignItems: "center",
-  height: 70,
+  height: 75,
 });
 
 export const navLink = {
   textDecoration: "none",
-  color: "#fff",
   marginLeft: "2rem",
+  cursor: "pointer",
 };
+
+export const linkArr = ["about", "skills", "projects", "contact"];

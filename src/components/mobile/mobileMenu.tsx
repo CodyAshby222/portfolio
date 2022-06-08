@@ -6,15 +6,25 @@ import {
   ListItemText,
   IconButton,
 } from "@mui/material";
+import { useModeContext } from "../../hooks/useContext";
 import { navLink } from "../navbar/navbarStyles";
 import Hamburger from "hamburger-react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 const MobileMenu = () => {
+  const { darkMode, setDarkMode } = useModeContext();
   const [open, setOpen] = useState(false);
+  const [changeBurger, setChangeBurger] = useState(false);
+
+  const changeHamburger = () => {
+    window.scrollY >= 1 ? setChangeBurger(true) : setChangeBurger(false);
+  };
+
+  window.addEventListener("scroll", changeHamburger);
+
   return (
     <>
-      <Drawer open={open} onClose={() => setOpen(false)}>
+      <Drawer anchor="top" open={open} onClose={() => setOpen(false)}>
         <List style={{ width: 320, display: "flex", flexDirection: "column" }}>
           <Link
             to="about"
@@ -53,8 +63,17 @@ const MobileMenu = () => {
             CONTACT
           </Link>
         </List>
+        <Hamburger
+          color={!darkMode ? "#000" : "#fff"}
+          toggled={open}
+          toggle={setOpen}
+        />
       </Drawer>
-      <Hamburger toggled={open} toggle={setOpen} />
+      <Hamburger
+        color={changeBurger && !darkMode ? "#000" : "#fff"}
+        toggled={open}
+        toggle={setOpen}
+      />
     </>
   );
 };

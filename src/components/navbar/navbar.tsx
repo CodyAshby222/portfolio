@@ -1,32 +1,33 @@
 import { useModeContext } from "../../hooks/useContext";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Typography, Container, useMediaQuery } from "@mui/material";
 import MobileMenu from "../mobile/mobileMenu";
 import { RowSpaceBetween } from "../../appStyles";
-import { Nav, NavGroup, navLink } from "./navbarStyles";
+import { Nav, NavGroup, navLink, linkArr } from "./navbarStyles";
 import { useLocation } from "react-router-dom";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import ToggleButton from "../toggleButton/toggleButton";
 
 const Navbar = () => {
   const { darkMode, setDarkMode } = useModeContext();
   const mobile = useMediaQuery("(max-width:800px)");
   const location = useLocation();
+  const [changeNav, setChangeNav] = useState(false);
 
-  useEffect(() => {
-    console.log(location.pathname);
-  }, [location]);
+  const changeNavbar = () => {
+    window.scrollY >= 1 ? setChangeNav(true) : setChangeNav(false);
+  };
 
-  useEffect(() => {
-    let url = window.location.href.split("/");
-    let target = url[url.length - 1].toLowerCase();
-    let element = document.getElementById(target);
-    element && element.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, []);
+  window.addEventListener("scroll", changeNavbar);
 
   return (
     <>
-      <Nav>
+      <Nav
+        style={{
+          backgroundColor:
+            changeNav && darkMode ? "#000" : changeNav ? "#fff" : "",
+        }}
+      >
         <Container maxWidth="lg">
           <RowSpaceBetween>
             <NavGroup></NavGroup>
@@ -37,41 +38,32 @@ const Navbar = () => {
                 <>
                   {location.pathname === "/" ? (
                     <>
-                      <Link
-                        to="about"
-                        smooth={true}
-                        offset={-100}
-                        duration={500}
-                      >
-                        ABOUT
-                      </Link>
-                      <Link
-                        to="skills"
-                        smooth={true}
-                        offset={-100}
-                        duration={500}
-                      >
-                        SKILLS
-                      </Link>
-                      <Link
-                        to="projects"
-                        smooth={true}
-                        offset={-100}
-                        duration={500}
-                      >
-                        PROJECTS
-                      </Link>
-                      <Link
-                        to="about"
-                        smooth={true}
-                        offset={-100}
-                        duration={500}
-                      >
-                        CONTACT
-                      </Link>
+                      {linkArr.map((link, i) => {
+                        return (
+                          <Link
+                            key={`${link}_${i}`}
+                            style={navLink}
+                            to={link}
+                            smooth={true}
+                            offset={-50}
+                            duration={500}
+                          >
+                            <Typography
+                              style={{
+                                color: changeNav && !darkMode ? "#000" : "#fff",
+                              }}
+                            >
+                              {link.toUpperCase()}
+                            </Typography>
+                          </Link>
+                        );
+                      })}
+                      {/* Contact Link Here - Modal Popup */}
                     </>
                   ) : (
-                    <a href="/">HOME</a>
+                    <a style={navLink} href="/">
+                      HOME
+                    </a>
                   )}
                   <ToggleButton />
                 </>
