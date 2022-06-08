@@ -23,6 +23,7 @@ const Skills = () => {
   return (
     <>
       <Section
+        id="skills"
         style={{ backgroundColor: `${darkMode ? "#0d0d0d" : "#f8fafa"}` }}
       >
         <WaveImage src={darkMode ? BlackWave : WhiteWave} />

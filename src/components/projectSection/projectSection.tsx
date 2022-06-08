@@ -20,7 +20,7 @@ const ProjectSection = () => {
 
   return (
     <>
-      <Box sx={boxStyles}>
+      <Box id="projects" sx={boxStyles}>
         <Container>
           <Typography sx={{ mb: 2, textAlign: "center" }} variant="h4">
             PROJECTS

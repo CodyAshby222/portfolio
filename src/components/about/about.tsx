@@ -8,7 +8,7 @@ const CodeImg = require("../../assets/images/code.png");
 const About = () => {
   return (
     <>
-      <Box sx={boxStyles}>
+      <Box id="about" sx={boxStyles}>
         <Container>
           <RowCenter style={{ alignItems: "center", position: "relative" }}>
             <ProfileImage src={ProfileImg} />
