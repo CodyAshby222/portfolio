@@ -33,7 +33,6 @@ const Footer = () => {
       <Section
         style={{
           background: `url(${darkMode ? DarkBg : LightBg}) center center`,
-          backgroundSize: "cover",
         }}
       >
         <Container>

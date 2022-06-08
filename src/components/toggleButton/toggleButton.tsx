@@ -25,7 +25,14 @@ const ToggleButton = () => {
         <Circle
           style={{
             left: darkMode ? 28 : 4,
-            backgroundColor: changeToggleColor && !darkMode ? "#fff" : "#000",
+            backgroundColor:
+              changeToggleColor && !darkMode
+                ? "#fff"
+                : changeToggleColor && darkMode
+                ? "#000"
+                : darkMode
+                ? "#1E5128"
+                : "#275F64",
           }}
         ></Circle>
       </ToggleSection>

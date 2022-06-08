@@ -1,5 +1,5 @@
 import { useModeContext } from "../../hooks/useContext";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Typography, Container, useMediaQuery } from "@mui/material";
 import MobileMenu from "../mobile/mobileMenu";
 import { RowSpaceBetween } from "../../appStyles";
@@ -9,7 +9,7 @@ import { Link } from "react-scroll";
 import ToggleButton from "../toggleButton/toggleButton";
 
 const Navbar = () => {
-  const { darkMode, setDarkMode } = useModeContext();
+  const { darkMode } = useModeContext();
   const mobile = useMediaQuery("(max-width:800px)");
   const location = useLocation();
   const [changeNav, setChangeNav] = useState(false);
@@ -25,7 +25,13 @@ const Navbar = () => {
       <Nav
         style={{
           backgroundColor:
-            changeNav && darkMode ? "#000" : changeNav ? "#fff" : "",
+            changeNav && darkMode ? "#000" : changeNav ? "#fff" : null,
+          boxShadow:
+            changeNav && darkMode
+              ? "0px 0px 8px rgba(255,255,255, 0.2)"
+              : changeNav
+              ? "0px 0px 8px rgba(0,0,0, 0.3)"
+              : null,
         }}
       >
         <Container maxWidth="lg">
