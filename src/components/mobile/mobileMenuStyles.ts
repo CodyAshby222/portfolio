@@ -8,8 +8,10 @@ export const BurgerPosition = styled("div")({
 
 export const mobileLink = {
   textDecoration: "none",
-  marginLeft: "2rem",
+  margin: "0 auto",
   cursor: "pointer",
+  border: "1px solid red",
+  width: 200,
 };
 
 export const linkArr = ["about", "skills", "projects", "contact"];

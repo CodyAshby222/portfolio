@@ -20,7 +20,7 @@ const Card = (props: IProject) => {
   };
 
   useEffect(() => {
-    setFullImg(require(`../../assets/images/${logo}.jpg`));
+    setFullImg(require(`../../assets/images/${logo}`));
   }, [logo]);
 
   return (

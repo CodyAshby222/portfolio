@@ -10,11 +10,13 @@ export const CardSection = styled("div")({
   boxShadow: "0px 0px 8px rgba(0,0,0,0.4)",
   position: "relative",
   backgroundPosition: "center",
-  backgroundSize: 300,
+  backgroundRepeat: "no-repeat",
+  backgroundColor: "black",
+  backgroundSize: 250,
   color: "#fff",
   "&:hover": {
     backgroundPosition: "left",
-    backgroundSize: 415,
+    backgroundSize: 350,
   },
 });
 

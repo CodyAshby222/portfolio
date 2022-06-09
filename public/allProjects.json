@@ -4,8 +4,8 @@
         "title": "Bifrost",
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
-        "logo": "bifrost-logo",
-        "img": ["bifrost-logo"],
+        "logo": "b-logo.png",
+        "img": ["bifrost-logo.jpg"],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript","html5", "javascript","html5", "javascript","html5", "javascript"]
@@ -15,8 +15,8 @@
         "title": "RSnip",
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
-        "logo": "bifrost-logo",
-        "img": ["bifrost-logo"],
+        "logo": "bifrost-logo.jpg",
+        "img": ["bifrost-logo.jpg"],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript"]
@@ -26,8 +26,8 @@
         "title": "Bifrost",
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
-        "logo": "bifrost-logo",
-        "img": ["bifrost-logo"],
+        "logo": "bifrost-logo.jpg",
+        "img": ["bifrost-logo.jpg"],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript"]
@@ -37,8 +37,8 @@
         "title": "Bifrost",
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
-        "logo": "bifrost-logo",
-        "img": ["bifrost-logo"],
+        "logo": "bifrost-logo.jpg",
+        "img": ["bifrost-logo.jpg"],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript"]

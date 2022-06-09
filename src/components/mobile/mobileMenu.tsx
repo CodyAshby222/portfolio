@@ -12,7 +12,7 @@ import { navLink } from "../navbar/navbarStyles";
 import Hamburger from "hamburger-react";
 import { Link } from "react-scroll";
 import { Relative } from "../../appStyles";
-import { BurgerPosition } from "./mobileMenuStyles";
+import { BurgerPosition, mobileLink } from "./mobileMenuStyles";
 
 const MobileMenu = () => {
   const { darkMode, setDarkMode } = useModeContext();
@@ -35,8 +35,11 @@ const MobileMenu = () => {
             toggle={setOpen}
           />
         </BurgerPosition>
-        <List style={{ display: "flex", flexDirection: "column" }}>
+        <List
+          style={{ display: "flex", flexDirection: "column", paddingTop: 50 }}
+        >
           <Link
+            style={mobileLink}
             to="about"
             spy={true}
             smooth={true}
