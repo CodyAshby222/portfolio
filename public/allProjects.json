@@ -1,43 +1,67 @@
 [
     {
         "id": 0,
+        "title": "KidSpace",
+        "subtitle": "Lightweight Discord Clone",
+        "description": "Lorem Ipsem project",
+        "logo": "kidspace/logo.png",
+        "img": ["bifrost-logo.jpg"],
+        "github": "github.com",
+        "website": "",
+        "technologies": ["html5", "javascript"]
+    },
+    {  
+        "id": 1,
+        "title": "RSnip",
+        "subtitle": "Lightweight Discord Clone",
+        "description": "Lorem Ipsem project",
+        "logo": "rsnip/logo.png",
+        "img": ["bifrost-logo.jpg"],
+        "github": "github.com",
+        "website": "",
+        "technologies": ["html5", "javascript"]
+    },
+    {
+        "id": 2,
         "title": "Bifrost",
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
-        "logo": "b-logo.png",
+        "logo": "bifrost/logo.png",
         "img": ["bifrost-logo.jpg"],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript","html5", "javascript","html5", "javascript","html5", "javascript"]
     },
-    {
-        "id": 1,
-        "title": "RSnip",
-        "subtitle": "Lightweight Discord Clone",
-        "description": "Lorem Ipsem project",
-        "logo": "bifrost-logo.jpg",
-        "img": ["bifrost-logo.jpg"],
-        "github": "github.com",
-        "website": "",
-        "technologies": ["html5", "javascript"]
-    },
-    {  
-        "id": 2,
-        "title": "Bifrost",
-        "subtitle": "Lightweight Discord Clone",
-        "description": "Lorem Ipsem project",
-        "logo": "bifrost-logo.jpg",
-        "img": ["bifrost-logo.jpg"],
-        "github": "github.com",
-        "website": "",
-        "technologies": ["html5", "javascript"]
-    },
+   
+   
     {  
         "id": 3,
-        "title": "Bifrost",
+        "title": "Cupcake",
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
-        "logo": "bifrost-logo.jpg",
+        "logo": "cupcake/logo.png",
+        "img": ["bifrost-logo.jpg"],
+        "github": "github.com",
+        "website": "",
+        "technologies": ["html5", "javascript"]
+    },
+    {  
+        "id": 4,
+        "title": "P&B Designs",
+        "subtitle": "Lightweight Discord Clone",
+        "description": "Lorem Ipsem project",
+        "logo": "pbdesign/black-logo.png",
+        "img": ["bifrost-logo.jpg"],
+        "github": "github.com",
+        "website": "",
+        "technologies": ["html5", "javascript"]
+    },
+    {  
+        "id": 5,
+        "title": "Sliced Tomatoes",
+        "subtitle": "Lightweight Discord Clone",
+        "description": "Lorem Ipsem project",
+        "logo": "slicedtomatoes/logo.png",
         "img": ["bifrost-logo.jpg"],
         "github": "github.com",
         "website": "",

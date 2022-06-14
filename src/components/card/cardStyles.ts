@@ -11,12 +11,12 @@ export const CardSection = styled("div")({
   position: "relative",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
-  backgroundColor: "black",
+  backgroundColor: "#f3f3f3",
   backgroundSize: 250,
-  color: "#fff",
+  color: "#000",
   "&:hover": {
-    backgroundPosition: "left",
-    backgroundSize: 350,
+    // backgroundPosition: "right",
+    backgroundSize: 200,
   },
 });
 
@@ -41,7 +41,7 @@ export const CardSubtitle = styled("div")({
 
 export const DevIcon = styled("i")({
   fontSize: "22px",
-  color: "#fff",
+  color: "#000",
   margin: 5,
   borderRadius: "100vh",
 });
