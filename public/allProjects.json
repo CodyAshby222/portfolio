@@ -5,7 +5,7 @@
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
         "logo": "kidspace/logo.png",
-        "img": ["bifrost-logo.jpg"],
+        "img": ["kidspace/logo.png", "kidspace/logo.png", "kidspace/logo.png","kidspace/logo.png", "kidspace/logo.png"],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript"]
