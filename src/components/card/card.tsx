@@ -20,8 +20,10 @@ const Card = (props: IProject) => {
   };
 
   useEffect(() => {
-    setFullImg(require(`../../assets/images/${logo}`));
-  }, [logo]);
+    title.includes("P&B") && !darkMode
+      ? setFullImg(require(`../../assets/images/pbdesign/black-logo.png`))
+      : setFullImg(require(`../../assets/images/${logo}`));
+  }, [logo, darkMode, title]);
 
   return (
     <>
@@ -29,6 +31,11 @@ const Card = (props: IProject) => {
         <CardSection
           style={{
             backgroundImage: `url(${fullImg})`,
+            backgroundColor: darkMode ? "#0d0d0d" : "#f8fafa",
+            color: darkMode ? "#fff" : "#000",
+            boxShadow: darkMode
+              ? "0px 0px 8px rgba(255,255,255, 0.3)"
+              : "0px 0px 8px rgba(0,0,0,0.2)",
           }}
           onMouseEnter={toggleHover}
           onMouseLeave={toggleHover}
@@ -47,6 +54,7 @@ const Card = (props: IProject) => {
                     return (
                       <DevIcon
                         key={`${icon}_${i}`}
+                        style={{ color: darkMode ? "#fff" : "#000" }}
                         className={`devicon-${icon}-plain`}
                       ></DevIcon>
                     );

@@ -25,13 +25,13 @@ const Navbar = () => {
       <Nav
         style={{
           backgroundColor:
-            changeNav && darkMode ? "#000" : changeNav ? "#fff" : null,
+            changeNav && darkMode ? "#000" : changeNav ? "#fff" : "",
           boxShadow:
             changeNav && darkMode
               ? "0px 0px 8px rgba(255,255,255, 0.2)"
               : changeNav
               ? "0px 0px 8px rgba(0,0,0, 0.2)"
-              : null,
+              : "",
         }}
       >
         <Container maxWidth="lg">
