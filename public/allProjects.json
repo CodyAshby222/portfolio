@@ -5,7 +5,7 @@
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
         "logo": "kidspace/logo.png",
-        "img": ["kidspace/logo.png", "kidspace/logo.png", "kidspace/logo.png","kidspace/logo.png", "kidspace/logo.png"],
+        "img": ["kidspace/img-0.png", "kidspace/img-1.png",  "kidspace/img-2.jpg",  "kidspace/img-3.jpg",  "kidspace/img-4.jpg",  "kidspace/img-5.jpg", "kidspace/img-6.jpg"],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript"]
@@ -16,7 +16,7 @@
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
         "logo": "rsnip/logo.png",
-        "img": ["bifrost-logo.jpg"],
+        "img": ["rsnip/img-0.png", "rsnip/img-1.png","rsnip/img-2.png","rsnip/img-3.png","rsnip/img-4.png","rsnip/img-5.png","rsnip/img-6.png","rsnip/img-7.png","rsnip/img-8.png","rsnip/img-9.png"],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript"]
@@ -27,7 +27,7 @@
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
         "logo": "bifrost/logo.png",
-        "img": ["bifrost-logo.jpg"],
+        "img": ["bifrost/img-0.png", "bifrost/img-1.png","bifrost/img-2.png"],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript","html5", "javascript","html5", "javascript","html5", "javascript"]
@@ -40,7 +40,7 @@
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
         "logo": "cupcake/logo.png",
-        "img": ["bifrost-logo.jpg"],
+        "img": ["cupcake/img-0.png", "cupcake/img-1.png"],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript"]
@@ -51,7 +51,7 @@
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
         "logo": "pbdesign/white-logo.png",
-        "img": ["bifrost-logo.jpg"],
+        "img": ["pbdesign/img-0.png", "pbdesign/img-1.png","pbdesign/img-2.png"],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript"]
@@ -62,7 +62,7 @@
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
         "logo": "slicedtomatoes/logo.png",
-        "img": ["bifrost-logo.jpg"],
+        "img": ["slicedtomatoes/img-0.jpg", "slicedtomatoes/img-1.jpg"],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript"]
