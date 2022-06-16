@@ -13,6 +13,7 @@ import {
   Title,
   SubTitle,
   HomeHeaderBox,
+  ProjectHeaderBox,
   SocialImage,
   SocialLink,
   InvertedWaveImage,
@@ -81,7 +82,7 @@ const ProjectHeader = ({ title, subtitle }) => {
       >
         <Container>
           <RowCenter style={{ alignItems: "center" }}>
-            <HomeHeaderBox>
+            <ProjectHeaderBox>
               <Title style={{ textAlign: "center" }}>
                 {title.toUpperCase()}
               </Title>
@@ -96,7 +97,7 @@ const ProjectHeader = ({ title, subtitle }) => {
                   VIEW WEBSITE
                 </WhiteButton>
               </RowCenter>
-            </HomeHeaderBox>
+            </ProjectHeaderBox>
           </RowCenter>
         </Container>
         <InvertedWaveImage src={darkMode ? BlackWave : WhiteWave} />

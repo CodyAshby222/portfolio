@@ -22,12 +22,17 @@ export const SubTitle = styled("div")({
 });
 
 export const HomeHeaderBox = styled("div")({
-  width: 650,
+  width: 500,
   margin: "2rem 1rem",
 });
 
 export const HomeHeaderImage = styled("img")({
   width: 500,
+  margin: "2rem 1rem",
+});
+
+export const ProjectHeaderBox = styled("div")({
+  width: 650,
   margin: "2rem 1rem",
 });
 
