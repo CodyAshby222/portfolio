@@ -20,6 +20,7 @@ import {
 } from "./headerStyles";
 import { useModeContext } from "../../hooks/useContext";
 import { HeaderAnimation } from "../animations/animation";
+import ContactModal from "../modal/modal";
 
 const LightImg = require("../../assets/images/light/header-img.png");
 const DarkImg = require("../../assets/images/dark/header-img.png");
@@ -57,7 +58,7 @@ const HomeHeader = () => {
                   <SocialImage src={GitHubImg} />
                 </SocialLink>
               </Row>
-              <WhiteButton>LET'S CHAT</WhiteButton>
+              <ContactModal whiteColor={true} />
             </HomeHeaderBox>
             <Relative>
               <HomeHeaderImage src={darkMode ? DarkImg : LightImg} />

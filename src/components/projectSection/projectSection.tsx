@@ -9,7 +9,7 @@ const ProjectSection = () => {
   const [allProjects, setAllProjects] = useState<IProject[]>([]);
 
   const getAllProjects = () => {
-    fetch("allProjects.json")
+    fetch("projects.json")
       .then((res) => res.json())
       .then((data) => setAllProjects(data));
   };

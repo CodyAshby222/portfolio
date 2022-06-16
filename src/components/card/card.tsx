@@ -34,7 +34,7 @@ const Card = (props: IProject) => {
             backgroundColor: darkMode ? "#0d0d0d" : "#f8fafa",
             color: darkMode ? "#fff" : "#000",
             boxShadow: darkMode
-              ? "0px 0px 8px rgba(255,255,255, 0.3)"
+              ? "0px 0px 5px rgba(255,255,255, 0.3)"
               : "0px 0px 8px rgba(0,0,0,0.2)",
           }}
           onMouseEnter={toggleHover}
@@ -62,32 +62,6 @@ const Card = (props: IProject) => {
               : null}
           </DevGroup>
         </CardSection>
-        {/* <CardSection
-          style={{
-            boxShadow: `0px 0px 8px ${
-              hovered && darkMode
-                ? "#4E9F3D"
-                : hovered && !darkMode
-                ? "#2A9D8F"
-                : "rgba(0,0,0,0.3)"
-            }`,
-          }}
-          onMouseEnter={toggleHover}
-          onMouseLeave={toggleHover}
-        >
-          <RowSpaceBetween>
-            <CardInfo>
-              
-              <CardDescription>
-                {description} tes test test test test test test test test test
-                test test test test test test tes tte stest ts te test test
-                estes te setes test es test est estes t
-              </CardDescription>
-              
-            </CardInfo>
-            <CardImg src={require(`../../assets/images/bifrost/${logo}.jpg`)} />
-          </RowSpaceBetween>
-        </CardSection> */}
       </Link>
     </>
   );

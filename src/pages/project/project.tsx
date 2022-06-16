@@ -12,7 +12,7 @@ const Project = () => {
 
   useEffect(() => {
     console.log(projectId);
-    fetch("../allProjects.json", {})
+    fetch("../projects.json", {})
       .then((res) => res.json())
       .then((data) => {
         setProject(() => {
