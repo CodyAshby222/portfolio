@@ -5,7 +5,15 @@
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
         "logo": "kidspace/logo.png",
-        "img": ["kidspace/img-0.png", "kidspace/img-1.png",  "kidspace/img-2.jpg",  "kidspace/img-3.jpg",  "kidspace/img-4.jpg",  "kidspace/img-5.jpg", "kidspace/img-6.jpg"],
+        "img": [
+            {"src": "kidspace/img-0.png", "width": 2, "height": 1},
+            {"src": "kidspace/img-3.jpg", "width": 3, "height": 2},
+            {"src": "kidspace/img-1.png", "width": 4, "height": 3},
+            {"src": "kidspace/img-2.jpg", "width": 3, "height": 2},
+            {"src": "kidspace/img-4.jpg", "width": 4, "height": 3},
+            {"src": "kidspace/img-5.jpg", "width": 3, "height": 2},
+            {"src": "kidspace/img-6.jpg", "width": 2, "height": 1}
+        ],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript"]
@@ -16,7 +24,16 @@
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
         "logo": "rsnip/logo.png",
-        "img": ["rsnip/img-0.png", "rsnip/img-1.png","rsnip/img-2.png","rsnip/img-3.png","rsnip/img-4.png","rsnip/img-5.png","rsnip/img-6.png","rsnip/img-7.png","rsnip/img-8.png","rsnip/img-9.png"],
+        "img": [
+            {"src": "rsnip/img-2.png", "width": 3, "height": 4},
+            {"src": "rsnip/img-0.png", "width": 5, "height": 4},
+            {"src": "rsnip/img-1.png", "width": 1, "height": 1},
+            {"src": "rsnip/img-3.png", "width": 3, "height": 2},
+            {"src": "rsnip/img-4.png", "width": 1, "height": 1},
+            {"src": "rsnip/img-7.png", "width": 3, "height": 4},
+            {"src": "rsnip/img-5.png", "width": 3, "height": 2},
+            {"src": "rsnip/img-9.png", "width": 2, "height": 1}
+        ],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript"]
@@ -27,7 +44,11 @@
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
         "logo": "bifrost/logo.png",
-        "img": ["bifrost/img-0.png", "bifrost/img-1.png","bifrost/img-2.png"],
+        "img": [
+            {"src": "bifrost/img-0.png", "width": 3, "height": 2},
+            {"src": "bifrost/img-1.png", "width": 4, "height": 3},
+            {"src": "bifrost/img-2.png", "width": 2, "height": 3}
+        ],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript","html5", "javascript","html5", "javascript","html5", "javascript"]
@@ -40,18 +61,25 @@
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
         "logo": "cupcake/logo.png",
-        "img": ["cupcake/img-0.png", "cupcake/img-1.png"],
+        "img": [
+            {"src": "cupcake/img-0.png", "width": 4, "height": 3},
+            {"src": "cupcake/img-1.png", "width": 3, "height": 4}
+        ],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript"]
     },
     {  
         "id": 4,
-        "title": "P&B Designs",
+        "title": "P&B Custom Designs",
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
         "logo": "pbdesign/white-logo.png",
-        "img": ["pbdesign/img-0.png", "pbdesign/img-1.png","pbdesign/img-2.png"],
+        "img": [
+            {"src": "pbdesign/img-2.png", "width": 1, "height": 2},
+            {"src": "pbdesign/img-0.png", "width": 3, "height": 2},
+            {"src": "pbdesign/img-1.png", "width": 4, "height": 3}
+        ],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript"]
@@ -62,7 +90,10 @@
         "subtitle": "Lightweight Discord Clone",
         "description": "Lorem Ipsem project",
         "logo": "slicedtomatoes/logo.png",
-        "img": ["slicedtomatoes/img-0.jpg", "slicedtomatoes/img-1.jpg"],
+        "img": [
+            {"src": "slicedtomatoes/img-0.jpg", "width": 2, "height": 1},
+            {"src": "slicedtomatoes/img-1.jpg", "width": 2, "height": 1}
+        ],
         "github": "github.com",
         "website": "",
         "technologies": ["html5", "javascript"]

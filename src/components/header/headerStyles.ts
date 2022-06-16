@@ -22,7 +22,7 @@ export const SubTitle = styled("div")({
 });
 
 export const HomeHeaderBox = styled("div")({
-  width: 500,
+  width: 650,
   margin: "2rem 1rem",
 });
 

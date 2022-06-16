@@ -28,7 +28,12 @@ const ProjectSection = () => {
           <RowCenter style={{ alignItems: "center" }}>
             {allProjects
               ? allProjects.map((project, i) => {
-                  return <Card key={`${project.title}_${i}`} {...project} />;
+                  return (
+                    <Card
+                      key={`${project.title}_${project.logo}_${i}`}
+                      {...project}
+                    />
+                  );
                 })
               : null}
           </RowCenter>
