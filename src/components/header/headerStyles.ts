@@ -56,21 +56,3 @@ export const SocialImage = styled("img")({
 });
 
 export const SocialLink = styled("a")({});
-
-export const LightCode = styled("img")({
-  width: 50,
-  opacity: 0.4,
-  position: "absolute",
-  right: "29%",
-  top: 96,
-});
-
-export const DarkCode = styled("img")({
-  width: 50,
-  WebkitFilter: "invert(100%)",
-  filter: "invert(100%)",
-  opacity: 0.5,
-  position: "absolute",
-  right: "29%",
-  top: 96,
-});

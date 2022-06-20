@@ -5,8 +5,9 @@ export const ToggleSection = styled("div")({
   height: 24,
   borderRadius: "100vh",
   position: "relative",
-  marginLeft: "2rem",
+  // marginLeft: "2rem",
   cursor: "pointer",
+  boxShadow: "0px 0px 4px rgba(0,0,0,0.3)",
 });
 
 export const Circle = styled("div")({

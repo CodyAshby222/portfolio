@@ -4,12 +4,21 @@ import { useModeContext } from "../../hooks/useContext";
 import Hamburger from "hamburger-react";
 import { Link } from "react-scroll";
 import { Relative } from "../../appStyles";
-import { BurgerPosition, mobileLink } from "./mobileMenuStyles";
+import { useLocation } from "react-router-dom";
+import {
+  BurgerPosition,
+  MobileLink,
+  listStyle,
+  HomeLink,
+} from "./mobileMenuStyles";
+import ToggleButton from "../toggleButton/toggleButton";
+import HomeIcon from "@mui/icons-material/Home";
 
 const MobileMenu = () => {
   const { darkMode } = useModeContext();
   const [open, setOpen] = useState(false);
   const [changeBurger, setChangeBurger] = useState(false);
+  const location = useLocation();
 
   const changeHamburger = () => {
     window.scrollY >= 1 ? setChangeBurger(true) : setChangeBurger(false);
@@ -19,7 +28,12 @@ const MobileMenu = () => {
 
   return (
     <Relative>
-      <Drawer anchor="top" open={open} onClose={() => setOpen(false)}>
+      <Drawer
+        sx={{ backgroundImage: "none", color: "#000" }}
+        anchor="top"
+        open={open}
+        onClose={() => setOpen(false)}
+      >
         <BurgerPosition>
           <Hamburger
             color={!darkMode ? "#000" : "#fff"}
@@ -27,46 +41,96 @@ const MobileMenu = () => {
             toggle={setOpen}
           />
         </BurgerPosition>
-        <List
-          style={{ display: "flex", flexDirection: "column", paddingTop: 50 }}
-        >
-          <Link
-            style={mobileLink}
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            <div onClick={() => setOpen(false)}>ABOUT</div>
-          </Link>
-          <Link
-            to="skills"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            <div onClick={() => setOpen(false)}>SKILLS</div>
-          </Link>
-          <Link
-            to="projects"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            <div onClick={() => setOpen(false)}>PROJECTS</div>
-          </Link>
-          <Link
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            <div onClick={() => setOpen(false)}>CONTACT</div>
-          </Link>
+        {/* @ts-ignore */}
+
+        <List style={listStyle}>
+          {location.pathname === "/" ? (
+            <>
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                <MobileLink
+                  style={{
+                    borderBottom: darkMode
+                      ? "1px solid rgba(255,255,255,0.3)"
+                      : "1px solid rgba(0,0,0,0.2)",
+                  }}
+                  onClick={() => setOpen(false)}
+                >
+                  ABOUT
+                </MobileLink>
+              </Link>
+              <Link
+                to="skills"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                <MobileLink
+                  style={{
+                    borderBottom: darkMode
+                      ? "1px solid rgba(255,255,255,0.3)"
+                      : "1px solid rgba(0,0,0,0.2)",
+                  }}
+                  onClick={() => setOpen(false)}
+                >
+                  SKILLS
+                </MobileLink>
+              </Link>
+              <Link
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                <MobileLink
+                  style={{
+                    borderBottom: darkMode
+                      ? "1px solid rgba(255,255,255,0.3)"
+                      : "1px solid rgba(0,0,0,0.2)",
+                  }}
+                  onClick={() => setOpen(false)}
+                >
+                  PROJECTS
+                </MobileLink>
+              </Link>
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                <MobileLink
+                  style={{
+                    borderBottom: darkMode
+                      ? "1px solid rgba(255,255,255,0.3)"
+                      : "1px solid rgba(0,0,0,0.2)",
+                    marginBottom: "1.25rem",
+                  }}
+                  onClick={() => setOpen(false)}
+                >
+                  CONTACT
+                </MobileLink>
+              </Link>
+            </>
+          ) : (
+            <HomeLink href="/">
+              <HomeIcon
+                style={{
+                  fontSize: "2rem",
+                  color: !darkMode ? "#000" : "#fff",
+                }}
+              />
+            </HomeLink>
+          )}
+          <ToggleButton />
         </List>
       </Drawer>
       <Hamburger

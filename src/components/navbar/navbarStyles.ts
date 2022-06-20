@@ -15,7 +15,7 @@ export const NavGroup = styled("div")({
 
 export const HomeLink = styled("a")({
   textDecoration: "none",
-  marginLeft: "2rem",
+  marginRight: "2rem",
   cursor: "pointer",
   display: "flex",
   alignItems: "center",
@@ -23,7 +23,7 @@ export const HomeLink = styled("a")({
 
 export const navLink = {
   textDecoration: "none",
-  marginLeft: "2rem",
+  marginRight: "2rem",
   cursor: "pointer",
   display: "flex",
   alignItems: "center",

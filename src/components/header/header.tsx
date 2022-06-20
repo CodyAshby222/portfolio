@@ -17,8 +17,6 @@ import {
   SocialImage,
   SocialLink,
   InvertedWaveImage,
-  LightCode,
-  DarkCode,
 } from "./headerStyles";
 import { useModeContext } from "../../hooks/useContext";
 import { HeaderAnimation } from "../animations/animation";
@@ -33,7 +31,6 @@ const LinkedInImg = require("../../assets/icons/linkedin-icon.png");
 const GitHubImg = require("../../assets/icons/github-icon.png");
 const LightBg = require("../../assets/images/light/header-bg.jpg");
 const DarkBg = require("../../assets/images/dark/header-bg.jpg");
-const CodeImg = require("../../assets/images/code.png");
 
 const HomeHeader = () => {
   const { darkMode } = useModeContext();
@@ -82,14 +79,6 @@ const HomeHeader = () => {
                 style={{ width: tablet ? 325 : 500 }}
                 src={darkMode ? DarkImg : LightImg}
               />
-              {/* {tablet ? (
-                <>
-                  <LightCode src={CodeImg} />
-                  <DarkCode src={CodeImg} />
-                </>
-              ) : (
-                <HeaderAnimation />
-              )} */}
               <HeaderAnimation />
             </Relative>
           </RowCenter>
@@ -107,6 +96,7 @@ const ProjectHeader = ({ title, subtitle }) => {
       <Section
         style={{
           background: `url(${darkMode ? DarkBg : LightBg}) center center`,
+          padding: "7rem 0",
         }}
       >
         <Container>

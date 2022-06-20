@@ -33,7 +33,8 @@ export const ListIcon = styled("i")({
   color: "#2A9D8F",
   // padding: 10,
   marginRight: "1rem",
-  marginBottom: "0.5rem",
+  margin: "0 0.5rem 0.5rem 0.5rem",
+  // marginBottom: "0.5rem",
 });
 
 export const listStyle = {
