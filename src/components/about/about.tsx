@@ -26,13 +26,14 @@ const About = () => {
               <Typography sx={{ mb: 2 }}>
                 I'm a senior at Neumont College of Computer Science majoring in
                 Web Design and Development. My interest in development started
-                years ago with a good friend showing me some fundamentals of
-                code. It caught my eye and I've been passionate ever since.
+                years ago with a friend showing me websites he built. It caught
+                my eye and I've been passionate ever since.
               </Typography>
               <Typography>
                 I've learned many skills and my goal is to continue my journey
-                as a web developer and continue to strengthen my skills with
-                libraries and frameworks like React, Angular, NodeJS, and more.
+                as a front-end developer and continue to strengthen my skills
+                with libraries and frameworks like React, Angular, NodeJS, and
+                more.
               </Typography>
             </Box>
             {!tablet ? (
