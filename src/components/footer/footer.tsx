@@ -1,7 +1,6 @@
-import { Container, Box, Typography } from "@mui/material";
+import { Container, Box } from "@mui/material";
 import {
   OrangeButton,
-  Row,
   RowCenter,
   WhiteButton,
   WhiteText,

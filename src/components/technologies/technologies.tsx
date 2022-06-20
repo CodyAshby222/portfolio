@@ -5,8 +5,6 @@ import { useModeContext } from "../../hooks/useContext";
 
 const WhiteWave = require("../../assets/images/light/white-wave.jpg");
 const BlackWave = require("../../assets/images/dark/black-wave.jpg");
-const LightImg = require("../../assets/images/light/skills-img.png");
-const DarkImg = require("../../assets/images/dark/skills-img.png");
 
 const Technologies = ({ techUsed }) => {
   const { darkMode } = useModeContext();

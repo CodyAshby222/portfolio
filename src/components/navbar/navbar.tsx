@@ -3,10 +3,11 @@ import { useState } from "react";
 import { Typography, Container, useMediaQuery } from "@mui/material";
 import MobileMenu from "../mobile/mobileMenu";
 import { RowSpaceBetween } from "../../appStyles";
-import { Nav, NavGroup, navLink, linkArr } from "./navbarStyles";
+import { Nav, NavGroup, navLink, linkArr, HomeLink } from "./navbarStyles";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-scroll";
 import ToggleButton from "../toggleButton/toggleButton";
+import HomeIcon from "@mui/icons-material/Home";
 
 const Navbar = () => {
   const { darkMode } = useModeContext();
@@ -67,15 +68,15 @@ const Navbar = () => {
                       {/* Contact Link Here - Modal Popup */}
                     </>
                   ) : (
-                    <a style={navLink} href="/">
-                      <Typography
+                    <HomeLink href="/">
+                      <HomeIcon
                         style={{
+                          fontSize: "2rem",
+                          marginRight: "-1rem",
                           color: changeNav && !darkMode ? "#000" : "#fff",
                         }}
-                      >
-                        HOME
-                      </Typography>
-                    </a>
+                      />
+                    </HomeLink>
                   )}
                   <ToggleButton />
                 </>

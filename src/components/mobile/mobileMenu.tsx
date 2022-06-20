@@ -1,21 +1,13 @@
 import React, { useState } from "react";
-import {
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-  IconButton,
-  Typography,
-} from "@mui/material";
+import { Drawer, List } from "@mui/material";
 import { useModeContext } from "../../hooks/useContext";
-import { navLink } from "../navbar/navbarStyles";
 import Hamburger from "hamburger-react";
 import { Link } from "react-scroll";
 import { Relative } from "../../appStyles";
 import { BurgerPosition, mobileLink } from "./mobileMenuStyles";
 
 const MobileMenu = () => {
-  const { darkMode, setDarkMode } = useModeContext();
+  const { darkMode } = useModeContext();
   const [open, setOpen] = useState(false);
   const [changeBurger, setChangeBurger] = useState(false);
 
@@ -47,7 +39,6 @@ const MobileMenu = () => {
             duration={500}
           >
             <div onClick={() => setOpen(false)}>ABOUT</div>
-            {/* <Typography onClick=()>ABOUT</Typography> */}
           </Link>
           <Link
             to="skills"

@@ -13,10 +13,20 @@ export const NavGroup = styled("div")({
   height: 75,
 });
 
+export const HomeLink = styled("a")({
+  textDecoration: "none",
+  marginLeft: "2rem",
+  cursor: "pointer",
+  display: "flex",
+  alignItems: "center",
+});
+
 export const navLink = {
   textDecoration: "none",
   marginLeft: "2rem",
   cursor: "pointer",
+  display: "flex",
+  alignItems: "center",
 };
 
 export const linkArr = ["about", "skills", "projects", "contact"];

@@ -1,15 +1,7 @@
-import {
-  Typography,
-  Box,
-  Container,
-  ImageList,
-  ImageListItem,
-} from "@mui/material";
+import { Typography, Box, Container } from "@mui/material";
 import { boxStyles } from "./projectDisplayStyles";
-import { RowCenter } from "../../appStyles";
 import Gallery from "react-photo-gallery";
 import React, { useState, useCallback, useEffect } from "react";
-import { render } from "react-dom";
 import Carousel, { Modal, ModalGateway } from "react-images";
 
 const ProjectDisplay = ({ title, desc, img }) => {

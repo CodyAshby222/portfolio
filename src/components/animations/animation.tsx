@@ -107,6 +107,7 @@ const SkillsAnimation = () => {
 const GearAnimation = () => {
   const { darkMode } = useModeContext();
   return (
+    // @ts-ignore
     <GearGroup style={{ filter: darkMode ? "invert(100%)" : null }}>
       <GearOne src={GearImg} />
       <GearTwo src={GearImg} />

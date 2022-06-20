@@ -13,7 +13,6 @@ export const CardSection = styled("div")({
   backgroundSize: 250,
   color: "#fff",
   "&:hover": {
-    // backgroundPosition: "bottom",
     backgroundSize: 190,
   },
 });

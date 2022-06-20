@@ -6,11 +6,6 @@ import { OrangeButton, WhiteButton } from "../../appStyles";
 const ContactModal = ({ whiteColor }: { whiteColor: boolean }) => {
   const [modalIsOpen, setIsOpen] = useState(false);
 
-  // function afterOpenModal() {
-  //   // references are now sync'd and can be accessed.
-  //   subtitle.style.color = "#f00";
-  // }
-
   return (
     <div>
       {whiteColor ? (
