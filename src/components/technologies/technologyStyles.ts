@@ -13,9 +13,12 @@ export const WaveImage = styled("img")({
 export const DevIcon = styled("i")({
   fontSize: "30px",
   padding: 5,
-  margin: "0.5rem 0rem 0.5rem 1rem",
+  margin: "0.5rem 0rem 0.5rem 0.5rem",
 });
 
 export const TechTitle = styled("div")({
   margin: "0 0.25rem",
+  overflow: "hidden",
+  whiteSpace: "nowrap",
+  textOverflow: "ellipsis",
 });

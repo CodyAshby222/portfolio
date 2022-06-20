@@ -26,7 +26,7 @@ const Technologies = ({ techUsed }) => {
                     <Row
                       style={{
                         alignItems: "center",
-                        width: 200,
+                        width: 250,
                         boxShadow: darkMode
                           ? "0px 0px 8px rgba(255,255,255,0.1)"
                           : "2px 2px 8px rgba(0,0,0,0.1)",

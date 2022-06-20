@@ -2,8 +2,8 @@
     {
         "id": 0,
         "title": "KidSpace",
-        "subtitle": "Lightweight Discord Clone",
-        "description": "Lorem Ipsem project",
+        "subtitle": "Daycare Application - Capstone",
+        "description": "KidSpace is a ''Grand Champion Industry Award'' project designed to help bridge communication gaps between parents and teachers. The application features include private and public chat rooms, uploading and downloading documentation, as well as data tracking to check your child's progress.",
         "logo": "kidspace/logo.png",
         "img": [
             {"src": "kidspace/img-0.png", "width": 2, "height": 1},
@@ -14,15 +14,15 @@
             {"src": "kidspace/img-5.jpg", "width": 3, "height": 2},
             {"src": "kidspace/img-6.jpg", "width": 2, "height": 1}
         ],
-        "github": "github.com",
+        "github": "https://github.com/CodyAshby222/capstone",
         "website": "",
-        "technologies": ["html5", "javascript"]
+        "technologies": ["react","javascript", "nodejs", "mongodb", "socketio", "html5", "css3" , "git","illustrator", "trello",  "figma"]
     },
     {  
         "id": 1,
         "title": "RSnip",
-        "subtitle": "Lightweight Discord Clone",
-        "description": "Lorem Ipsem project",
+        "subtitle": "React Snippet Library",
+        "description": "RSnip is a tool that we created to allow users to create and store their own React code solutions as snippets that run in the browser. Our goal was to create a project that can save, view and reuse snippets to reduce redundancy and that's exactly what we did.",
         "logo": "rsnip/logo.png",
         "img": [
             {"src": "rsnip/img-2.png", "width": 3, "height": 4},
@@ -34,68 +34,66 @@
             {"src": "rsnip/img-5.png", "width": 3, "height": 2},
             {"src": "rsnip/img-9.png", "width": 2, "height": 1}
         ],
-        "github": "github.com",
+        "github": "https://github.com/DRoberts919/Rsnip",
         "website": "",
-        "technologies": ["html5", "javascript"]
+        "technologies": ["react","javascript", "html5", "css3" , "amazonwebservices", "jest",  "git", "trello",  "xd"]
     },
     {
         "id": 2,
         "title": "Bifrost",
         "subtitle": "Lightweight Discord Clone",
-        "description": "Lorem Ipsem project",
+        "description": "Bifrost is a ''Project Showcase: Overall Audience Favorite'' project that is designed to replicate a lightweight clone of Discord. It allows users to create and chat in various servers and channels. We were able to accomplish this within a four week time period and we had a blast!",
         "logo": "bifrost/logo.png",
         "img": [
             {"src": "bifrost/img-0.png", "width": 3, "height": 2},
             {"src": "bifrost/img-1.png", "width": 4, "height": 3},
             {"src": "bifrost/img-2.png", "width": 2, "height": 3}
         ],
-        "github": "github.com",
+        "github": "https://github.com/josephreed2600/bifrost",
         "website": "",
-        "technologies": ["html5", "javascript","html5", "javascript","html5", "javascript","html5", "javascript", "javascript"]
+        "technologies": ["javascript", "html5", "css3" , "nodejs", "socketio", "git", "trello",  "xd"]
     },
-   
-   
     {  
         "id": 3,
         "title": "Cupcake",
-        "subtitle": "Lightweight Discord Clone",
-        "description": "Lorem Ipsem project",
+        "subtitle": "Grocery Tracker",
+        "description": "Cupcake is a lightweight grocery tracking application that is designed to keep track of groceries and being able to use CRUD operations. This was an individual project accomplished in two weeks.",
         "logo": "cupcake/logo.png",
         "img": [
             {"src": "cupcake/img-0.png", "width": 4, "height": 3},
             {"src": "cupcake/img-1.png", "width": 3, "height": 4}
         ],
-        "github": "github.com",
+        "github": "https://github.com/CodyAshby222/grocery",
         "website": "",
-        "technologies": ["html5", "javascript"]
+        "technologies": ["react","javascript", "nodejs", "mongodb", "html5", "css3" , "git", "trello",  "figma"]
     },
     {  
         "id": 4,
         "title": "P&B Custom Designs",
-        "subtitle": "Lightweight Discord Clone",
-        "description": "Lorem Ipsem project",
+        "subtitle": "Cabinetry Website",
+        "description": "P&B Custom Designs was created to advertise for a cabinetry team. It has a form implemented to send out an email to the owner of the company for inquiries.",
         "logo": "pbdesign/white-logo.png",
         "img": [
             {"src": "pbdesign/img-2.png", "width": 1, "height": 2},
             {"src": "pbdesign/img-0.png", "width": 3, "height": 2},
             {"src": "pbdesign/img-1.png", "width": 4, "height": 3}
         ],
-        "github": "github.com",
+        "github": "https://github.com/CodyAshby222/pb-design",
         "website": "",
-        "technologies": ["html5", "javascript"]
+        "technologies": ["react","typescript", "html5", "css3" ,"xd", "git", "trello" ]
     },
     {  
         "id": 5,
         "title": "Sliced Tomatoes",
-        "subtitle": "Lightweight Discord Clone",
-        "description": "Lorem Ipsem project",
+        "subtitle": "Movie Review/Rating Application",
+        "description": "Sliced Tomatoes was designed to call a MovieAPI and be able to review and rate movies. This project was split into two parts. First using MEVN Stack then transitioning to MEAN Stack while adding GraphQL instead of RESTful APIs.",
         "logo": "slicedtomatoes/logo.png",
         "img": [
             {"src": "slicedtomatoes/img-0.jpg", "width": 2, "height": 1},
             {"src": "slicedtomatoes/img-1.jpg", "width": 2, "height": 1}
         ],
-        "github": "github.com",
+        "github": "https://github.com/WinteryOS/AngularGraphQL",
         "website": "",
-        "technologies": ["html5", "javascript"]
+        "technologies": ["angularjs", "vuejs", "nodejs", "mongodb", "graphql",  "javascript", "html5", "css3" ,"xd", "git", "trello"]
     }
 ]

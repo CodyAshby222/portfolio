@@ -26,8 +26,7 @@ const ProjectSection = () => {
             PROJECTS
           </Typography>
           <Typography sx={{ mb: 2, textAlign: "center" }}>
-            Select the cards below to check out the project and technologies
-            used.
+            Select a card below to check out the project and technologies used.
           </Typography>
           <RowCenter style={{ alignItems: "center" }}>
             {allProjects
