@@ -24,16 +24,15 @@ const About = () => {
                 ABOUT ME
               </Typography>
               <Typography sx={{ mb: 2 }}>
-                I'm a student at Neumont College of Computer Science majoring in
+                I'm a senior at Neumont College of Computer Science majoring in
                 Web Design and Development. My interest in development started
-                years ago with a couple of friends showing me some fundamentals
-                of code and I developed a passion ever since.
+                years ago with a good friend showing me some fundamentals of
+                code. It caught my eye and I've been passionate ever since.
               </Typography>
               <Typography>
-                I've learned a lot since then and I want to continue my journey
-                as a web developer and hone my skills with varieties of
-                libraries and frameworks like React, Angular, NodeJS, and many
-                more.
+                I've learned many skills and my goal is to continue my journey
+                as a web developer and continue to strengthen my skills with
+                libraries and frameworks like React, Angular, NodeJS, and more.
               </Typography>
             </Box>
             {!tablet ? (

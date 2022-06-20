@@ -59,8 +59,8 @@ const Skills = () => {
                   className={`devicon-${icons[3]}-plain colored`}
                 ></ListIcon>
                 <Typography style={{ width: 375 }}>
-                  I'm a student at Neumont College of Computer Science majoring
-                  in Web Development.
+                  Proficient skills in React, JavaScript/TypeScript, CSS, HTML
+                  and more!
                 </Typography>
               </Row>
               <Row style={listStyle}>
@@ -68,8 +68,7 @@ const Skills = () => {
                   className={`devicon-${icons[3]}-plain colored`}
                 ></ListIcon>
                 <Typography style={{ width: 375 }}>
-                  I'm a student at Neumont College of Computer Science majoring
-                  in Web Development.
+                  Strong problem-solving techniques and a huge growth mindset.
                 </Typography>
               </Row>
               <Row style={listStyle}>
@@ -77,8 +76,8 @@ const Skills = () => {
                   className={`devicon-${icons[3]}-plain colored`}
                 ></ListIcon>
                 <Typography style={{ width: 375 }}>
-                  I'm a student at Neumont College of Computer Science majoring
-                  in Web Development.
+                  Excellent communication and teamwork skills with a keen eye
+                  for responsive web design.
                 </Typography>
               </Row>
             </Box>
