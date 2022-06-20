@@ -32,12 +32,14 @@ export const ListIcon = styled("i")({
   fontSize: "30px",
   color: "#2A9D8F",
   // padding: 10,
-  marginRight: 12,
+  marginRight: "1rem",
+  marginBottom: "0.5rem",
 });
 
 export const listStyle = {
   alignItems: "center",
   margin: "30px 10px 10px 10px",
+  justifyContent: "center",
 };
 
 export const icons = [

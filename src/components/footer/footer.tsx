@@ -37,7 +37,13 @@ const Footer = () => {
         <Container>
           <RowCenter style={{ alignItems: "center" }}>
             <Box>
-              <WhiteText style={{ fontSize: "2rem", fontWeight: 500 }}>
+              <WhiteText
+                style={{
+                  textAlign: "center",
+                  fontSize: "2rem",
+                  fontWeight: 500,
+                }}
+              >
                 Want to get in touch?
               </WhiteText>
               {darkMode ? (

@@ -12,12 +12,14 @@ import {
   GearGroup,
 } from "./animationStyles";
 import { Row } from "../../appStyles";
+import { useMediaQuery } from "@mui/material";
 
 const GearImg = require("../../assets/images/gear.png");
 
 const HeaderAnimation = () => {
   const { darkMode } = useModeContext();
   const [count, setCount] = useState<number>(0);
+  const tablet = useMediaQuery("(max-width:800px)");
 
   useEffect(() => {
     let myInterval = setInterval(() => {
@@ -29,7 +31,7 @@ const HeaderAnimation = () => {
   });
 
   return (
-    <Code>
+    <Code style={{ top: tablet ? 91 : 126, left: tablet ? 175 : 268 }}>
       {codeArray
         ? codeArray.map((arr, i) => {
             return (
@@ -41,14 +43,17 @@ const HeaderAnimation = () => {
               >
                 <CodeLines
                   style={{
+                    margin: !tablet ? "5px 3px 0px 3px" : "3px 1px 0px 1px",
                     backgroundColor: darkMode ? "#ddd" : "#3F3D56",
-                    width: count < i * 2 - 1 ? 0 : arr[1],
+                    width:
+                      count < i * 2 - 1 ? 0 : !tablet ? arr[1] : arr[1] * 0.65,
                   }}
                 ></CodeLines>
                 <CodeLines
                   style={{
+                    margin: !tablet ? "5px 3px 0px 3px" : "3px 1px 0px 1px",
                     backgroundColor: darkMode ? "#ddd" : "#3F3D56",
-                    width: count < i * 2 ? 0 : arr[2],
+                    width: count < i * 2 ? 0 : !tablet ? arr[2] : arr[2] * 0.65,
                   }}
                 ></CodeLines>
               </Row>
@@ -62,6 +67,7 @@ const HeaderAnimation = () => {
 const SkillsAnimation = () => {
   const { darkMode } = useModeContext();
   const [count, setCount] = useState<number>(0);
+  const tablet = useMediaQuery("(max-width:800px)");
 
   useEffect(() => {
     let myInterval = setInterval(() => {
@@ -73,27 +79,32 @@ const SkillsAnimation = () => {
   });
 
   return (
-    <SkillsCode>
+    <SkillsCode style={{ top: tablet ? 133 : 176, left: tablet ? 125 : 172 }}>
       {skillsCodeArray
         ? skillsCodeArray.map((arr, i) => {
             return (
               <Row key={`${arr[0]}_${i}`}>
                 <CodeLines
                   style={{
+                    margin: !tablet ? "5px 3px 0px 3px" : "3px 1px 0px 1px",
                     backgroundColor: darkMode ? "#ddd" : "#3F3D56",
-                    width: count < i * 3 - 2 ? 0 : arr[0],
+                    width:
+                      count < i * 3 - 2 ? 0 : !tablet ? arr[0] : arr[0] * 0.75,
                   }}
                 ></CodeLines>
                 <CodeLines
                   style={{
+                    margin: !tablet ? "5px 3px 0px 3px" : "3px 1px 0px 1px",
                     backgroundColor: darkMode ? "#ddd" : "#3F3D56",
-                    width: count < i * 3 - 1 ? 0 : arr[1],
+                    width:
+                      count < i * 3 - 1 ? 0 : !tablet ? arr[1] : arr[1] * 0.75,
                   }}
                 ></CodeLines>
                 <CodeLines
                   style={{
+                    margin: !tablet ? "5px 3px 0px 3px" : "3px 1px 0px 1px",
                     backgroundColor: darkMode ? "#ddd" : "#3F3D56",
-                    width: count < i * 3 ? 0 : arr[2],
+                    width: count < i * 3 ? 0 : !tablet ? arr[2] : arr[2] * 0.75,
                   }}
                 ></CodeLines>
               </Row>
@@ -106,12 +117,34 @@ const SkillsAnimation = () => {
 
 const GearAnimation = () => {
   const { darkMode } = useModeContext();
+  const tablet = useMediaQuery("(max-width:800px)");
   return (
     // @ts-ignore
     <GearGroup style={{ filter: darkMode ? "invert(100%)" : null }}>
-      <GearOne src={GearImg} />
-      <GearTwo src={GearImg} />
-      <GearThree src={GearImg} />
+      <GearOne
+        style={{
+          top: tablet ? 40 : 30,
+          left: tablet ? 155 : 200,
+          width: tablet ? 45 : 70,
+        }}
+        src={GearImg}
+      />
+      <GearTwo
+        style={{
+          top: tablet ? 20 : 10,
+          left: tablet ? 200 : 285,
+          width: tablet ? 30 : 40,
+        }}
+        src={GearImg}
+      />
+      <GearThree
+        style={{
+          top: tablet ? 60 : 70,
+          left: tablet ? 215 : 300,
+          width: tablet ? 30 : 50,
+        }}
+        src={GearImg}
+      />
     </GearGroup>
   );
 };

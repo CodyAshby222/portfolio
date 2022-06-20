@@ -1,4 +1,4 @@
-import { Typography, Box, Container } from "@mui/material";
+import { Typography, Box, Container, useMediaQuery } from "@mui/material";
 import { boxStyles, ProfileImage, LightCode, DarkCode } from "./aboutStyles";
 import { RowCenter } from "../../appStyles";
 
@@ -6,6 +6,7 @@ const ProfileImg = require("../../assets/images/profile-img.jpg");
 const CodeImg = require("../../assets/images/code.png");
 
 const About = () => {
+  const tablet = useMediaQuery("(max-width:1035px)");
   return (
     <>
       <Box id="about" sx={boxStyles}>
@@ -13,7 +14,13 @@ const About = () => {
           <RowCenter style={{ alignItems: "center", position: "relative" }}>
             <ProfileImage src={ProfileImg} />
             <Box style={{ width: 650 }}>
-              <Typography sx={{ mb: 2 }} variant="h4">
+              <Typography
+                style={{
+                  marginBottom: "1rem",
+                  textAlign: !tablet ? "left" : "center",
+                }}
+                variant="h4"
+              >
                 ABOUT ME
               </Typography>
               <Typography sx={{ mb: 2 }}>
@@ -29,8 +36,12 @@ const About = () => {
                 more.
               </Typography>
             </Box>
-            <LightCode src={CodeImg} />
-            <DarkCode src={CodeImg} />
+            {!tablet ? (
+              <>
+                <LightCode src={CodeImg} />
+                <DarkCode src={CodeImg} />
+              </>
+            ) : null}
           </RowCenter>
         </Container>
       </Box>

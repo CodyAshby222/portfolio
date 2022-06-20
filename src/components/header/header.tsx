@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Container, useMediaQuery } from "@mui/material";
 import {
   Row,
   RowCenter,
@@ -17,6 +17,8 @@ import {
   SocialImage,
   SocialLink,
   InvertedWaveImage,
+  LightCode,
+  DarkCode,
 } from "./headerStyles";
 import { useModeContext } from "../../hooks/useContext";
 import { HeaderAnimation } from "../animations/animation";
@@ -31,22 +33,37 @@ const LinkedInImg = require("../../assets/icons/linkedin-icon.png");
 const GitHubImg = require("../../assets/icons/github-icon.png");
 const LightBg = require("../../assets/images/light/header-bg.jpg");
 const DarkBg = require("../../assets/images/dark/header-bg.jpg");
+const CodeImg = require("../../assets/images/code.png");
 
 const HomeHeader = () => {
   const { darkMode } = useModeContext();
+  const lgScreen = useMediaQuery("(max-width:1125px)");
+  const tablet = useMediaQuery("(max-width:800px)");
+  const mobile = useMediaQuery("(max-width:500px)");
+
   return (
     <>
       <Section
         style={{
           background: `url(${darkMode ? DarkBg : LightBg}) center center`,
+          padding: tablet ? "5rem 0" : "9rem 0",
         }}
       >
         <Container>
           <RowCenter style={{ alignItems: "center" }}>
-            <HomeHeaderBox>
+            <HomeHeaderBox
+              style={{
+                alignItems: lgScreen ? "center" : "",
+                width: mobile ? 325 : 500,
+              }}
+            >
               <SubTitle>Hello, I'm</SubTitle>
-              <Title>CODY ASHBY</Title>
-              <SubTitle>FRONT-END WEB DEVELOPER</SubTitle>
+              <Title style={{ fontSize: mobile ? "2.5rem" : "3.5rem" }}>
+                CODY ASHBY
+              </Title>
+              <SubTitle style={{ fontSize: mobile ? "1.25rem" : "1.5rem" }}>
+                FRONT-END WEB DEVELOPER
+              </SubTitle>
               <Row style={{ marginTop: 20, marginBottom: 40 }}>
                 <SocialLink href="#">
                   <SocialImage src={EmailImg} />
@@ -61,7 +78,18 @@ const HomeHeader = () => {
               <ContactModal whiteColor={true} />
             </HomeHeaderBox>
             <Relative>
-              <HomeHeaderImage src={darkMode ? DarkImg : LightImg} />
+              <HomeHeaderImage
+                style={{ width: tablet ? 325 : 500 }}
+                src={darkMode ? DarkImg : LightImg}
+              />
+              {/* {tablet ? (
+                <>
+                  <LightCode src={CodeImg} />
+                  <DarkCode src={CodeImg} />
+                </>
+              ) : (
+                <HeaderAnimation />
+              )} */}
               <HeaderAnimation />
             </Relative>
           </RowCenter>

@@ -1,7 +1,6 @@
 import { styled } from "@mui/material/styles";
 
 export const Section = styled("div")({
-  padding: "9rem 0px",
   backgroundSize: "cover",
   position: "relative",
 });
@@ -22,12 +21,12 @@ export const SubTitle = styled("div")({
 });
 
 export const HomeHeaderBox = styled("div")({
-  width: 500,
+  display: "flex",
+  flexDirection: "column",
   margin: "2rem 1rem",
 });
 
 export const HomeHeaderImage = styled("img")({
-  width: 500,
   margin: "2rem 1rem",
 });
 
@@ -57,3 +56,21 @@ export const SocialImage = styled("img")({
 });
 
 export const SocialLink = styled("a")({});
+
+export const LightCode = styled("img")({
+  width: 50,
+  opacity: 0.4,
+  position: "absolute",
+  right: "29%",
+  top: 96,
+});
+
+export const DarkCode = styled("img")({
+  width: 50,
+  WebkitFilter: "invert(100%)",
+  filter: "invert(100%)",
+  opacity: 0.5,
+  position: "absolute",
+  right: "29%",
+  top: 96,
+});

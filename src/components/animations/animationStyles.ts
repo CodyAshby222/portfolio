@@ -4,33 +4,27 @@ export const CodeLines = styled("div")({
   height: 3,
   borderRadius: "100vh",
   transition: "1s ease",
-  transitionDelay: "0.5s",
-  margin: "5px 3px 0px 3px",
 });
 
 export const Code = styled("div")({
   position: "absolute",
-  top: 126,
-  left: 268,
 });
 
 export const codeArray = [
-  [0, 105, 35],
-  [0, 70, 55],
-  [0, 30, 105],
-  [0, 90, 20],
-  [12, 50, 70],
-  [30, 100, 0],
-  [43, 30, 65],
-  [50, 10, 60],
-  [50, 40, 15],
-  [50, 15, 50],
+  [0, 70, 65],
+  [0, 55, 55],
+  [0, 30, 85],
+  [0, 85, 20],
+  [6, 50, 70],
+  [26, 50, 20],
+  [35, 20, 35],
+  [40, 30, 60],
+  [45, 40, 15],
+  [45, 15, 50],
 ];
 
 export const SkillsCode = styled("div")({
   position: "absolute",
-  top: 176,
-  left: 172,
 });
 
 export const skillsCodeArray = [
@@ -58,10 +52,6 @@ export const GearGroup = styled("div")({
 
 export const GearOne = styled("img")({
   position: "absolute",
-  top: 30,
-  left: 200,
-  width: 70,
-
   animation: `spinEffect infinite 13s linear`,
   "@keyframes spinEffect": {
     from: {
@@ -75,9 +65,6 @@ export const GearOne = styled("img")({
 
 export const GearTwo = styled("img")({
   position: "absolute",
-  top: 10,
-  left: 285,
-  width: 40,
   animation: `otherEffect infinite 10s linear`,
   "@keyframes otherEffect": {
     from: {
@@ -91,9 +78,6 @@ export const GearTwo = styled("img")({
 
 export const GearThree = styled("img")({
   position: "absolute",
-  top: 70,
-  left: 300,
-  width: 50,
   animation: `spinEffect infinite 12s linear`,
   "@keyframes spinEffect": {
     from: {

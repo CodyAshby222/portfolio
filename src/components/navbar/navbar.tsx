@@ -11,7 +11,7 @@ import HomeIcon from "@mui/icons-material/Home";
 
 const Navbar = () => {
   const { darkMode } = useModeContext();
-  const mobile = useMediaQuery("(max-width:800px)");
+  const tablet = useMediaQuery("(max-width:800px)");
   const location = useLocation();
   const [changeNav, setChangeNav] = useState(false);
 
@@ -39,7 +39,7 @@ const Navbar = () => {
           <RowSpaceBetween>
             <NavGroup></NavGroup>
             <NavGroup>
-              {mobile ? (
+              {tablet ? (
                 <MobileMenu />
               ) : (
                 <>

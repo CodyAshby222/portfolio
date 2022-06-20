@@ -1,4 +1,4 @@
-import { Typography, Box, Container } from "@mui/material";
+import { Typography, Box, Container, useMediaQuery } from "@mui/material";
 import {
   Section,
   WaveImage,
@@ -20,6 +20,9 @@ const DarkImg = require("../../assets/images/dark/skills-img.png");
 
 const Skills = () => {
   const { darkMode } = useModeContext();
+  const tablet = useMediaQuery("(max-width:800px)");
+  const mobile = useMediaQuery("(max-width:500px)");
+
   return (
     <>
       <Section
@@ -32,8 +35,13 @@ const Skills = () => {
             SKILLS
           </Typography>
 
-          <RowSpaceAround style={{ alignItems: "center" }}>
-            <Box style={{ width: 450, margin: "1rem" }}>
+          <RowSpaceAround
+            style={{
+              alignItems: "center",
+              textAlign: mobile ? "center" : "left",
+            }}
+          >
+            <Box style={{ width: mobile ? 350 : 450, margin: "1rem" }}>
               <RowCenter>
                 {icons
                   ? icons.map((icon, i) => {
@@ -75,7 +83,10 @@ const Skills = () => {
               </Row>
             </Box>
             <Relative>
-              <SkillsImage src={darkMode ? DarkImg : LightImg} />
+              <SkillsImage
+                style={{ width: tablet ? 325 : 450 }}
+                src={darkMode ? DarkImg : LightImg}
+              />
               <SkillsAnimation />
               <GearAnimation />
             </Relative>
