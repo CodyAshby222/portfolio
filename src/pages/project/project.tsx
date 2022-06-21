@@ -28,7 +28,11 @@ const Project = () => {
     <>
       {project ? (
         <>
-          <ProjectHeader title={project.title} subtitle={project.subtitle} />
+          <ProjectHeader
+            title={project.title}
+            subtitle={project.subtitle}
+            website={project.website}
+          />
           <ProjectDisplay
             title={project.title}
             desc={project.description}

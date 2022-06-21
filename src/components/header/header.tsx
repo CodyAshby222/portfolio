@@ -89,7 +89,7 @@ const HomeHeader = () => {
   );
 };
 
-const ProjectHeader = ({ title, subtitle }) => {
+const ProjectHeader = ({ title, subtitle, website }) => {
   const { darkMode } = useModeContext();
   return (
     <>
@@ -112,9 +112,11 @@ const ProjectHeader = ({ title, subtitle }) => {
                 <WhiteOutlineButton style={{ margin: "1rem" }}>
                   VIEW GITHUB
                 </WhiteOutlineButton>
-                <WhiteButton style={{ margin: "1rem" }}>
-                  VIEW WEBSITE
-                </WhiteButton>
+                {website ? (
+                  <WhiteButton style={{ margin: "1rem" }}>
+                    VIEW WEBSITE
+                  </WhiteButton>
+                ) : null}
               </RowCenter>
             </ProjectHeaderBox>
           </RowCenter>
