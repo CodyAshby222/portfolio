@@ -4,7 +4,7 @@ export const BurgerPosition = styled("div")({
   position: "absolute",
   top: 10,
   right: 10,
-  zIndex: 100,
+  zIndex: 20,
 });
 
 export const MobileLink = styled("div")({
