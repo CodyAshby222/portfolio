@@ -6,7 +6,14 @@ export const XButton = styled("div")({
   padding: "0.2rem 1rem",
   marginRight: "-0.75rem",
   marginTop: "-0.25rem",
-  color: "red",
+  color: "#dd0000",
+});
+
+export const ErrorMessage = styled("div")({
+  fontSize: "0.8rem",
+  color: "#dd0000",
+  fontWeight: 600,
+  marginBottom: "0.5rem",
 });
 
 export const ModalForm = styled("form")({
@@ -41,11 +48,29 @@ export const ModalTextArea = styled("textarea")({
   },
 });
 
+export const SocialImage = styled("img")({
+  width: 35,
+  marginRight: 5,
+  marginLeft: 5,
+  boxShadow: "0px 0px 8px rgba(0,0,0,0.3)",
+  borderRadius: "100vh",
+  WebkitFilter: "invert(100%)",
+  filter: "invert(100%)",
+  "&:hover": {
+    opacity: 0.9,
+  },
+});
+
+export const SocialLink = styled("a")({});
+
 export const submitStyle = {
-  padding: 6,
-  width: 100,
+  padding: "0.3rem 1rem",
+  width: 120,
   fontWeight: 500,
   marginTop: "0.5rem",
+  border: "none",
+  fontSize: "1rem",
+  fontFamily: "Poppins, sans-serif",
 };
 
 export const modalStyle = {

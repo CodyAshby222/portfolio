@@ -134,3 +134,19 @@ export const OrangeButton = styled("div")({
     opacity: 0.9,
   },
 });
+
+export const OrangeSubmit = styled("input")({
+  width: 175,
+  color: "#fff",
+  background: "linear-gradient(to bottom right, #F4A261, #E76F51)",
+  fontWeight: 700,
+  borderRadius: "100vh",
+  textAlign: "center",
+  padding: "10px",
+  cursor: "pointer",
+  transition: "0.2s",
+  boxShadow: "0px 0px 8px rgba(0,0,0,0.3)",
+  "&:hover": {
+    opacity: 0.9,
+  },
+});
