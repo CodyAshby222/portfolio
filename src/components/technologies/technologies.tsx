@@ -2,23 +2,39 @@ import { Typography, Container } from "@mui/material";
 import { Section, WaveImage, DevIcon, TechTitle } from "./technologyStyles";
 import { Row, RowCenter } from "../../appStyles";
 import { useModeContext } from "../../hooks/useContext";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const WhiteWave = require("../../assets/images/light/white-wave.jpg");
 const BlackWave = require("../../assets/images/dark/black-wave.jpg");
 
 const Technologies = ({ techUsed }) => {
   const { darkMode } = useModeContext();
+
+  useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 300,
+      easing: "ease-in-sine",
+    });
+    AOS.refresh();
+  }, []);
+
   return (
     <>
       <WaveImage src={darkMode ? BlackWave : WhiteWave} />
       <Section
         style={{ backgroundColor: `${darkMode ? "#0d0d0d" : "#f8fafa"}` }}
       >
-        <Container maxWidth="md" sx={{ color: "text.primary" }}>
+        <Container
+          data-aos="fade-up"
+          maxWidth="md"
+          sx={{ color: "text.primary" }}
+        >
           <Typography sx={{ mb: 2, textAlign: "center" }} variant="h4">
             TECHNOLOGIES
           </Typography>
-
           <RowCenter>
             {techUsed
               ? techUsed.map((tech, i) => {

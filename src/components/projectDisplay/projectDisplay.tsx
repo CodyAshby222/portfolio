@@ -1,14 +1,24 @@
 import { Typography, Box, Container } from "@mui/material";
-import { boxStyles } from "./projectDisplayStyles";
+import { boxStyles, ProjectSection } from "./projectDisplayStyles";
 import Gallery from "react-photo-gallery";
 import React, { useState, useCallback, useEffect } from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ProjectDisplay = ({ title, desc, img }) => {
+  useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 300,
+      easing: "ease-in-sine",
+    });
+    AOS.refresh();
+  }, []);
   return (
     <>
       <Box sx={boxStyles}>
-        <Container maxWidth="md">
+        <Container data-aos="fade-up" maxWidth="md">
           <Typography
             style={{ marginBottom: "1rem", textAlign: "center" }}
             variant="h4"
@@ -32,7 +42,7 @@ const ImageGallery = ({ img }) => {
     if (img) {
       setPhotos(() => {
         let tempPhotos: any[] = [];
-        img.forEach((image, i) => {
+        img.forEach((image: any) => {
           tempPhotos.push({
             src: require(`../../assets/images/${image.src}`),
             width: image.width,
@@ -43,10 +53,9 @@ const ImageGallery = ({ img }) => {
         return tempPhotos;
       });
     }
-    console.log(img);
   }, [img]);
 
-  const openLightbox = useCallback((event, { photo, index }) => {
+  const openLightbox = useCallback((e, { photo, index }) => {
     setCurrentImage(index);
     setViewerIsOpen(true);
   }, []);
@@ -57,7 +66,7 @@ const ImageGallery = ({ img }) => {
   };
 
   return (
-    <div>
+    <ProjectSection>
       <Gallery photos={photos} onClick={openLightbox} />
       {/* @ts-ignore */}
       <ModalGateway>
@@ -77,7 +86,7 @@ const ImageGallery = ({ img }) => {
           </Modal>
         ) : null}
       </ModalGateway>
-    </div>
+    </ProjectSection>
   );
 };
 

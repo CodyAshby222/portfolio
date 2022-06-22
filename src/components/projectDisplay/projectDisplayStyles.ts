@@ -1,5 +1,7 @@
 import { styled } from "@mui/material/styles";
 
+export const ProjectSection = styled("div")({});
+
 export const boxStyles = {
   color: "text.primary",
   bgcolor: "background.default",

@@ -127,7 +127,7 @@ const ProjectHeader = ({ title, subtitle, website, github }) => {
           padding: "7rem 0",
         }}
       >
-        <Container>
+        <Container data-aos="fade-up">
           <RowCenter style={{ alignItems: "center" }}>
             <ProjectHeaderBox>
               <Title style={{ textAlign: "center" }}>

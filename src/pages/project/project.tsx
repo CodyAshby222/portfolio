@@ -11,7 +11,6 @@ const Project = () => {
   const { projectId } = useParams();
 
   useEffect(() => {
-    console.log(projectId);
     fetch("../projects.json", {})
       .then((res) => res.json())
       .then((data) => {
