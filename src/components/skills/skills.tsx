@@ -12,6 +12,9 @@ import {
 import { Row, RowCenter, RowSpaceAround, Relative } from "../../appStyles";
 import { useModeContext } from "../../hooks/useContext";
 import { GearAnimation, SkillsAnimation } from "../animations/animation";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const WhiteWave = require("../../assets/images/light/white-wave.png");
 const BlackWave = require("../../assets/images/dark/black-wave.png");
@@ -23,6 +26,15 @@ const Skills = () => {
   const tablet = useMediaQuery("(max-width:800px)");
   const mobile = useMediaQuery("(max-width:500px)");
 
+  useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 300,
+      easing: "ease-in-sine",
+    });
+    AOS.refresh();
+  }, []);
+
   return (
     <>
       <Section
@@ -31,7 +43,11 @@ const Skills = () => {
       >
         <WaveImage src={darkMode ? BlackWave : WhiteWave} />
         <Container sx={{ color: "text.primary" }}>
-          <Typography sx={{ mb: 2, textAlign: "center" }} variant="h4">
+          <Typography
+            data-aos="fade-up"
+            sx={{ mb: 2, textAlign: "center" }}
+            variant="h4"
+          >
             SKILLS
           </Typography>
 
@@ -41,7 +57,10 @@ const Skills = () => {
               textAlign: mobile ? "center" : "left",
             }}
           >
-            <Box style={{ width: mobile ? 350 : 450, margin: "1rem" }}>
+            <Box
+              data-aos="fade-up"
+              style={{ width: mobile ? 350 : 450, margin: "1rem" }}
+            >
               <RowCenter>
                 {icons
                   ? icons.map((icon, i) => {
@@ -81,7 +100,7 @@ const Skills = () => {
                 </Typography>
               </Row>
             </Box>
-            <Relative>
+            <Relative data-aos="fade-up">
               <SkillsImage
                 style={{ width: tablet ? 325 : 450 }}
                 src={darkMode ? DarkImg : LightImg}

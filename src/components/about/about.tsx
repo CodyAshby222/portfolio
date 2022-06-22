@@ -1,17 +1,33 @@
 import { Typography, Box, Container, useMediaQuery } from "@mui/material";
 import { boxStyles, ProfileImage, LightCode, DarkCode } from "./aboutStyles";
 import { RowCenter } from "../../appStyles";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ProfileImg = require("../../assets/images/profile-img.jpg");
 const CodeImg = require("../../assets/images/code.png");
 
 const About = () => {
   const tablet = useMediaQuery("(max-width:1035px)");
+
+  useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 300,
+      easing: "ease-in-sine",
+    });
+    AOS.refresh();
+  }, []);
+
   return (
     <>
       <Box id="about" sx={boxStyles}>
         <Container>
-          <RowCenter style={{ alignItems: "center", position: "relative" }}>
+          <RowCenter
+            data-aos="fade-up"
+            style={{ alignItems: "center", position: "relative" }}
+          >
             <ProfileImage src={ProfileImg} />
             <Box style={{ width: 650 }}>
               <Typography

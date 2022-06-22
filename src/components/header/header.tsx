@@ -22,6 +22,8 @@ import { useModeContext } from "../../hooks/useContext";
 import { HeaderAnimation } from "../animations/animation";
 import ContactModal from "../modal/modal";
 import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const LightImg = require("../../assets/images/light/header-img.png");
 const DarkImg = require("../../assets/images/dark/header-img.png");
@@ -38,6 +40,15 @@ const HomeHeader = () => {
   const lgScreen = useMediaQuery("(max-width:1125px)");
   const tablet = useMediaQuery("(max-width:800px)");
   const mobile = useMediaQuery("(max-width:500px)");
+
+  useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 300,
+      easing: "ease-in-sine",
+    });
+    AOS.refresh();
+  }, []);
 
   return (
     <>
@@ -100,8 +111,13 @@ const ProjectHeader = ({ title, subtitle, website, github }) => {
   const { darkMode } = useModeContext();
 
   useEffect(() => {
-    console.log(github);
-  }, [github]);
+    AOS.init({
+      offset: 100,
+      duration: 300,
+      easing: "ease-in-sine",
+    });
+    AOS.refresh();
+  }, []);
 
   return (
     <>

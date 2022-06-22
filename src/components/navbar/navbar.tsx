@@ -65,7 +65,6 @@ const Navbar = () => {
                           </Link>
                         );
                       })}
-                      {/* Contact Link Here - Modal Popup */}
                     </>
                   ) : (
                     <HomeLink href="/">

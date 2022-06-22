@@ -29,4 +29,4 @@ export const navLink = {
   alignItems: "center",
 };
 
-export const linkArr = ["about", "skills", "projects", "contact"];
+export const linkArr = ["about", "skills", "projects"];
