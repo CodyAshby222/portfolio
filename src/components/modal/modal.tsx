@@ -33,7 +33,6 @@ const ContactModal = ({ whiteColor }: { whiteColor: boolean }) => {
 
   const sendInfo = (e: any) => {
     e.preventDefault();
-    console.log(process.env.REACT_APP_KEY);
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE!,
@@ -43,7 +42,6 @@ const ContactModal = ({ whiteColor }: { whiteColor: boolean }) => {
       )
       .then(
         (result: any) => {
-          console.log(result.text);
           setIsOpen(false);
           setThankYou(true);
           setError(false);
@@ -51,7 +49,6 @@ const ContactModal = ({ whiteColor }: { whiteColor: boolean }) => {
         },
         (error: any) => {
           setError(true);
-          console.log(error.text);
         }
       );
   };
