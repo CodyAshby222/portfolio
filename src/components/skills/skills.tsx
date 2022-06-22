@@ -70,8 +70,8 @@ const Skills = () => {
                   className={`devicon-${icons[3]}-plain colored`}
                 ></ListIcon>
                 <Typography style={{ width: 375 }}>
-                  Proficient skills in React, JavaScript/TypeScript, CSS, HTML
-                  and more!
+                  Proficient in React, JavaScript/TypeScript, CSS, HTML and
+                  NodeJS.
                 </Typography>
               </Row>
               <Row style={listStyle}>
@@ -79,7 +79,8 @@ const Skills = () => {
                   className={`devicon-${icons[3]}-plain colored`}
                 ></ListIcon>
                 <Typography style={{ width: 375 }}>
-                  Strong problem-solving techniques and a huge growth mindset.
+                  Expertise in problem-solving techniques and growing with
+                  others.
                 </Typography>
               </Row>
               <Row style={listStyle}>
@@ -87,8 +88,7 @@ const Skills = () => {
                   className={`devicon-${icons[3]}-plain colored`}
                 ></ListIcon>
                 <Typography style={{ width: 375 }}>
-                  Excellent communication and teamwork skills with a keen eye
-                  for responsive web design.
+                  Great communication, creativity and teamwork abilities.
                 </Typography>
               </Row>
             </Box>
