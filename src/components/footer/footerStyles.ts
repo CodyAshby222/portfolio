@@ -28,9 +28,13 @@ export const WaveImage = styled("img")({
 
 export const SocialImage = styled("img")({
   width: 35,
-  marginRight: 10,
+  marginRight: 5,
+  marginLeft: 5,
   boxShadow: "0px 0px 8px rgba(0,0,0,0.3)",
   borderRadius: "100vh",
+  "&:hover": {
+    opacity: 0.9,
+  },
 });
 
 export const SocialLink = styled("a")({});

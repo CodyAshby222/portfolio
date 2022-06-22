@@ -53,6 +53,9 @@ export const SocialImage = styled("img")({
   marginRight: 10,
   boxShadow: "0px 0px 8px rgba(0,0,0,0.3)",
   borderRadius: "100vh",
+  "&:hover": {
+    opacity: 0.9,
+  },
 });
 
 export const SocialLink = styled("a")({});

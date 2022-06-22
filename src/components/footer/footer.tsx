@@ -9,6 +9,7 @@ import { Section, WaveImage, SocialImage, SocialLink } from "./footerStyles";
 import { useModeContext } from "../../hooks/useContext";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import ContactModal from "../modal/modal";
 
 const WhiteWave = require("../../assets/images/light/white-wave.png");
 const GreyWave = require("../../assets/images/light/grey-wave.png");
@@ -23,9 +24,6 @@ const DarkBg = require("../../assets/images/dark/header-bg.jpg");
 const Footer = () => {
   const { darkMode } = useModeContext();
   const location = useLocation();
-  useEffect(() => {
-    console.log(location.pathname);
-  }, [location]);
 
   return (
     <>
@@ -47,22 +45,28 @@ const Footer = () => {
                 Want to get in touch?
               </WhiteText>
               {darkMode ? (
-                <WhiteButton style={{ margin: "1.5rem auto" }}>
-                  LET'S CHAT
-                </WhiteButton>
+                <div style={{ margin: "1.5rem auto" }}>
+                  <ContactModal whiteColor={true} />
+                </div>
               ) : (
-                <OrangeButton style={{ margin: "1.5rem auto" }}>
-                  LET'S CHAT
-                </OrangeButton>
+                <div style={{ margin: "1.5rem auto" }}>
+                  <ContactModal whiteColor={false} />
+                </div>
               )}
               <RowCenter style={{ marginTop: "2rem", marginBottom: 40 }}>
-                <SocialLink href="#">
+                <SocialLink href="mailto:cashby220@gmail.com">
                   <SocialImage src={EmailImg} />
                 </SocialLink>
-                <SocialLink href="#">
+                <SocialLink
+                  target="_blank"
+                  href="https://www.linkedin.com/in/cody-ashby-240b381b8"
+                >
                   <SocialImage src={LinkedInImg} />
                 </SocialLink>
-                <SocialLink href="#">
+                <SocialLink
+                  target="_blank"
+                  href="https://github.com/CodyAshby222"
+                >
                   <SocialImage src={GitHubImg} />
                 </SocialLink>
               </RowCenter>

@@ -62,13 +62,19 @@ const HomeHeader = () => {
                 FRONT-END WEB DEVELOPER
               </SubTitle>
               <Row style={{ marginTop: 20, marginBottom: 40 }}>
-                <SocialLink href="#">
+                <SocialLink href="mailto:cashby220@gmail.com">
                   <SocialImage src={EmailImg} />
                 </SocialLink>
-                <SocialLink href="#">
+                <SocialLink
+                  target="_blank"
+                  href="https://www.linkedin.com/in/cody-ashby-240b381b8"
+                >
                   <SocialImage src={LinkedInImg} />
                 </SocialLink>
-                <SocialLink href="#">
+                <SocialLink
+                  target="_blank"
+                  href="https://github.com/CodyAshby222"
+                >
                   <SocialImage src={GitHubImg} />
                 </SocialLink>
               </Row>
