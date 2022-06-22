@@ -19,7 +19,7 @@ export const ModalInput = styled("input")({
   padding: "0.5rem 1rem",
   border: "1px solid rgba(0, 0, 0, 0.2)",
   width: 265,
-  borderRadius: "100vh",
+  borderRadius: 7,
   boxShadow: "-2px 2px 5px rgba(0, 0, 0, 0.1)",
   "&:focus": {
     outline: "none",
@@ -32,7 +32,7 @@ export const ModalTextArea = styled("textarea")({
   padding: "0.5rem 1rem",
   border: "1px solid rgba(0, 0, 0, 0.2)",
   width: 265,
-  borderRadius: 20,
+  borderRadius: 7,
   height: 100,
   boxShadow: "-2px 2px 5px rgba(0, 0, 0, 0.1)",
   resize: "none",
@@ -57,7 +57,7 @@ export const modalStyle = {
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
     width: 300,
-    borderRadius: 15,
+    borderRadius: 7,
   },
   overlay: {
     backgroundColor: "rgba(0,0,0,0.5)",

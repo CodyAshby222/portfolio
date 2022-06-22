@@ -42,25 +42,17 @@ const Skills = () => {
         style={{ backgroundColor: `${darkMode ? "#0d0d0d" : "#f8fafa"}` }}
       >
         <WaveImage src={darkMode ? BlackWave : WhiteWave} />
-        <Container sx={{ color: "text.primary" }}>
-          <Typography
-            data-aos="fade-up"
-            sx={{ mb: 2, textAlign: "center" }}
-            variant="h4"
-          >
+        <Container data-aos="fade-up" sx={{ color: "text.primary" }}>
+          <Typography sx={{ mb: 2, textAlign: "center" }} variant="h4">
             SKILLS
           </Typography>
-
           <RowSpaceAround
             style={{
               alignItems: "center",
               textAlign: mobile ? "center" : "left",
             }}
           >
-            <Box
-              data-aos="fade-up"
-              style={{ width: mobile ? 350 : 450, margin: "1rem" }}
-            >
+            <Box style={{ width: mobile ? 350 : 450, margin: "1rem" }}>
               <RowCenter>
                 {icons
                   ? icons.map((icon, i) => {
@@ -100,7 +92,7 @@ const Skills = () => {
                 </Typography>
               </Row>
             </Box>
-            <Relative data-aos="fade-up">
+            <Relative>
               <SkillsImage
                 style={{ width: tablet ? 325 : 450 }}
                 src={darkMode ? DarkImg : LightImg}

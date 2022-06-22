@@ -4,6 +4,8 @@ import { RowCenter } from "../../appStyles";
 import Card from "../card/card";
 import { useEffect, useState } from "react";
 import { IProject } from "../../interfaces/projectInterface";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ProjectSection = () => {
   const [allProjects, setAllProjects] = useState<IProject[]>([]);
@@ -16,12 +18,18 @@ const ProjectSection = () => {
 
   useEffect(() => {
     getAllProjects();
+    AOS.init({
+      offset: 100,
+      duration: 300,
+      easing: "ease-in-sine",
+    });
+    AOS.refresh();
   }, []);
 
   return (
     <>
       <Box id="projects" sx={boxStyles}>
-        <Container>
+        <Container data-aos="fade-up">
           <Typography sx={{ mb: 2, textAlign: "center" }} variant="h4">
             PROJECTS
           </Typography>

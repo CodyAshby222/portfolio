@@ -58,7 +58,7 @@ const HomeHeader = () => {
           padding: tablet ? "5rem 0" : "9rem 0",
         }}
       >
-        <Container>
+        <Container data-aos="fade-up">
           <RowCenter style={{ alignItems: "center" }}>
             <HomeHeaderBox
               style={{

@@ -1,15 +1,12 @@
 import { Container, Box } from "@mui/material";
-import {
-  OrangeButton,
-  RowCenter,
-  WhiteButton,
-  WhiteText,
-} from "../../appStyles";
+import { RowCenter, WhiteText } from "../../appStyles";
 import { Section, WaveImage, SocialImage, SocialLink } from "./footerStyles";
 import { useModeContext } from "../../hooks/useContext";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import ContactModal from "../modal/modal";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const WhiteWave = require("../../assets/images/light/white-wave.png");
 const GreyWave = require("../../assets/images/light/grey-wave.png");
@@ -25,6 +22,14 @@ const Footer = () => {
   const { darkMode } = useModeContext();
   const location = useLocation();
 
+  useEffect(() => {
+    AOS.init({
+      duration: 300,
+      easing: "ease-in-sine",
+    });
+    AOS.refresh();
+  }, []);
+
   return (
     <>
       <Section
@@ -32,7 +37,7 @@ const Footer = () => {
           background: `url(${darkMode ? DarkBg : LightBg}) center center`,
         }}
       >
-        <Container>
+        <Container data-aos="fade-in">
           <RowCenter style={{ alignItems: "center" }}>
             <Box>
               <WhiteText
