@@ -21,6 +21,7 @@ import {
 import { useModeContext } from "../../hooks/useContext";
 import { HeaderAnimation } from "../animations/animation";
 import ContactModal from "../modal/modal";
+import { useEffect } from "react";
 
 const LightImg = require("../../assets/images/light/header-img.png");
 const DarkImg = require("../../assets/images/dark/header-img.png");
@@ -95,8 +96,13 @@ const HomeHeader = () => {
   );
 };
 
-const ProjectHeader = ({ title, subtitle, website }) => {
+const ProjectHeader = ({ title, subtitle, website, github }) => {
   const { darkMode } = useModeContext();
+
+  useEffect(() => {
+    console.log(github);
+  }, [github]);
+
   return (
     <>
       <Section
@@ -115,11 +121,21 @@ const ProjectHeader = ({ title, subtitle, website }) => {
                 {subtitle.toUpperCase()}
               </SubTitle>
               <RowCenter>
-                <WhiteOutlineButton style={{ margin: "1rem" }}>
-                  VIEW GITHUB
-                </WhiteOutlineButton>
+                {github ? (
+                  <WhiteOutlineButton
+                    target="_blank"
+                    href={`${github}`}
+                    style={{ margin: "1rem" }}
+                  >
+                    VIEW GITHUB
+                  </WhiteOutlineButton>
+                ) : null}
                 {website ? (
-                  <WhiteButton style={{ margin: "1rem" }}>
+                  <WhiteButton
+                    target="_blank"
+                    href={`${website}`}
+                    style={{ margin: "1rem" }}
+                  >
                     VIEW WEBSITE
                   </WhiteButton>
                 ) : null}

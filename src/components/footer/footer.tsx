@@ -45,11 +45,11 @@ const Footer = () => {
                 Want to get in touch?
               </WhiteText>
               {darkMode ? (
-                <div style={{ margin: "1.5rem auto" }}>
+                <div style={{ margin: "1.5rem auto", width: 195 }}>
                   <ContactModal whiteColor={true} />
                 </div>
               ) : (
-                <div style={{ margin: "1.5rem auto" }}>
+                <div style={{ margin: "1.5rem auto", width: 195 }}>
                   <ContactModal whiteColor={false} />
                 </div>
               )}

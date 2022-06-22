@@ -32,6 +32,7 @@ const Project = () => {
             title={project.title}
             subtitle={project.subtitle}
             website={project.website}
+            github={project.github}
           />
           <ProjectDisplay
             title={project.title}

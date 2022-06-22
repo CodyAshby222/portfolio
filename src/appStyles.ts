@@ -79,7 +79,7 @@ export const RowSpaceAround = styled("div")({
 
 // Buttons
 
-export const WhiteButton = styled("div")({
+export const WhiteButton = styled("a")({
   width: 175,
   height: 25,
   color: "#264653",
@@ -92,12 +92,14 @@ export const WhiteButton = styled("div")({
   cursor: "pointer",
   transition: "0.2s",
   boxShadow: "0px 0px 8px rgba(0,0,0,0.3)",
+  display: "inline-block",
+  textDecoration: "none",
   "&:hover": {
     backgroundColor: "#eee",
   },
 });
 
-export const WhiteOutlineButton = styled("div")({
+export const WhiteOutlineButton = styled("a")({
   width: 175,
   height: 25,
   color: "#fff",
@@ -109,6 +111,8 @@ export const WhiteOutlineButton = styled("div")({
   cursor: "pointer",
   transition: "0.2s",
   boxShadow: "0px 0px 8px rgba(0,0,0,0.3)",
+  display: "inline-block",
+  textDecoration: "none",
   "&:hover": {
     backgroundColor: "#fff",
     color: "#264653",
